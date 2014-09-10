@@ -252,7 +252,7 @@ $(function(){
 			ir2.init( $ir2Obj );
 			ir2.paging( $ir2Wrap );
 			
-			// arrow unwrap at pc browser
+			// arrow unwrap at mobile
 			if( mobile ){
 				$('.index.visual_section_1 .arrow a.left, .index.visual_section_2 .arrow a.left, .pr_detail.visual .arrow a.left').unwrap( '<div></div>' );
 				$('.index.visual_section_1 .arrow a.right, .index.visual_section_2 .arrow a.right, .pr_detail.visual .arrow a.right').unwrap( '<div></div>' );
@@ -790,15 +790,21 @@ $(function(){
 		
 	})();
 	
+	
 	// 제품 이미지 thumbnail
 	(function(){
+		
+		var $imgWrap = $('.pr_detail.pr_main .big_img_wrap');
+		var $imgObj = $('.pr_detail.pr_main .big_img_wrap div');
+		var thumbCount = $imgWrap.find('div').size();
+		var bigImg = new Rolling( $imgObj );
+		var bigImageWidth = $('.pr_detail.pr_main .big_img_list img').outerWidth();
+		
 		$('.pr_detail.pr_main .img_wrap>div').on('click' , function(event){
 			event.preventDefault();
 			
-			var $imgWrap = $('.pr_detail.pr_main .big_img_wrap');
-			var thumbCount = $imgWrap.find('div').size();
 			var imageIndex = $(this).index();
-			var bigImageWidth = $('.pr_detail.pr_main .big_img_list img').outerWidth();
+			bigImageWidth = $('.pr_detail.pr_main .big_img_list img').outerWidth();
 			bigImage.sliding( $imgWrap, imageIndex, thumbCount, 1, bigImageWidth );
 			
 			$('.pr_detail.pr_main .thumb_cover').removeClass('on');
@@ -844,8 +850,96 @@ $(function(){
 			$('.pr_detail.pr_main .big_img_wrap').css({
 				width: bigImageWidth * bigImageLength
 			});
-			
 		});
+		
+		// mobile swipe
+		if( $('section').is('.pr_detail') ){
+			
+			var imgObjLength = $imgObj.length;
+			
+				// swipe start
+				$imgObj.on('touchstart', function(e){
+					//e.preventDefault();
+					
+					//clearInterval(tId);
+					touchedIndex = $(this).index();
+					oldLeft = originalLeft = e.originalEvent.touches[0].clientX;
+					oldTop = originalTop = e.originalEvent.touches[0].clientY;
+					originalPosition = $imgWrap.position().left;
+					//bigImg.swipeStart( $imgObj, touchedIndex );
+				});
+			
+				// swipe move
+				$imgObj.on('touchmove', function(e){
+					var distanceX = oldLeft - e.originalEvent.touches[0].clientX;
+					var distanceY = oldTop - e.originalEvent.touches[0].clientY;
+					oldLeft = e.originalEvent.touches[0].clientX;
+					oldTop = e.originalEvent.touches[0].clientY;
+					slope = distanceY / distanceX;
+					if( Math.abs(slope) < 0.5 ) {
+						e.preventDefault();
+						//bigImg.swipeMove( $imgObj, distanceX );
+						$imgWrap.stop().animate({left:'-=' + distanceX}, 0);
+					}
+				});
+				
+				// swipe end
+				$imgObj.on('touchend', function(e){
+					
+					var diff = originalPosition - $imgWrap.position().left;
+					bigImageWidth = $('.pr_detail.pr_main .big_img_list img').outerWidth();
+					
+					if( Math.abs( diff ) > bigImageWidth/4 ){
+						// next
+						if( diff > 0 ){
+							var nextIndex = touchedIndex+1;
+							if(nextIndex >= imgObjLength){
+								bigImage.sliding( $imgWrap, touchedIndex, thumbCount, 1, bigImageWidth );
+							} else {
+								bigImage.sliding( $imgWrap, nextIndex, thumbCount, 1, bigImageWidth );	
+								$('.pr_detail.pr_main .img_wrap .thumb_cover').removeClass('on');
+								$('.pr_detail.pr_main .img_wrap div').eq(nextIndex).find('.thumb_cover').addClass('on');
+								
+								var $thumbWrap = $('.pr_detail.pr_main .img_wrap');
+								var currentTop = $thumbWrap.css('top');
+								var currentLeft = $thumbWrap.css('left');
+								var thumbCount = $thumbWrap.find('div').size();
+								if( $(window).width() < 768 ) {
+									console.log(1);
+									thumbnail.sliding( $thumbWrap, currentLeft, thumbCount, 3,  'left' );
+								}
+							}
+							
+						// prev	
+						} else {
+							var nextIndex = touchedIndex-1;
+							if(nextIndex < 0){
+								bigImage.sliding( $imgWrap, touchedIndex, thumbCount, 1, bigImageWidth );
+							} else {
+								bigImage.sliding( $imgWrap, nextIndex, thumbCount, 1, bigImageWidth );
+								$('.pr_detail.pr_main .img_wrap .thumb_cover').removeClass('on');
+								$('.pr_detail.pr_main .img_wrap div').eq(nextIndex).find('.thumb_cover').addClass('on');
+								
+								var $thumbWrap = $('.pr_detail.pr_main .img_wrap');
+								var currentTop = $thumbWrap.css('top');
+								var currentLeft = $thumbWrap.css('left');
+								var thumbCount = $thumbWrap.find('div').size();
+								if( $(window).width() < 768 ) {
+									console.log(1);
+									thumbnail.sliding( $thumbWrap, currentLeft, thumbCount, 3,  'right' );
+								}
+							}
+						}
+						
+					} else {
+						bigImage.sliding( $imgWrap, touchedIndex, thumbCount, 1, bigImageWidth );
+					}
+					
+				});
+		}
+		
+		
+		
 	})();
 	 
 	// 옵션 이미지 thumbnail

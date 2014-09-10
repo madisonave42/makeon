@@ -1314,8 +1314,8 @@
 @media screen and ( max-width:767px ){
 
 .web_img,
-.tablet_img {display:none;}
-.mobile_img {display:block;}
+.tablet_img {display:none; width:100%;}
+.mobile_img {display:block; width:100%;}
 
 .pr_detail.feature,
 .pr_detail.effect,
@@ -1428,6 +1428,7 @@
 	width:34%;
 	box-sizing:border-box;
 }
+.pr_detail.pr_main .figure .share .grade .status{font-size:20px; font-size:2.0rem;}
 .pr_detail.pr_main .figure .share .grade .photo_review,
 .pr_detail.pr_main .figure .share .grade .comment {
 	width:33%;
@@ -1440,8 +1441,14 @@
 	margin-top:50px;
 }
 .pr_detail.pr_main .pr_info hgroup h1 {
-	font-size:3rem;
+	font-size:20px;
+	font-size:2.0rem;
 	word-break:keep-all;
+}
+.pr_detail.pr_main .pr_info hgroup p{
+	font-size:13px;
+	font-size:1.3rem;
+	
 }
 .pr_detail.pr_main .pr_info .pay_info:after {
 	content:"";
@@ -1451,12 +1458,19 @@
 .pr_detail.pr_main .pr_info .pay_info dt {
 	padding-left:3%;
 	width:45%;
+	font-size:12px;
+	font-size:1.2rem;
 }
 .pr_detail.pr_main .pr_info .pay_info dd {
 	width:52%;
+	font-size:12px;
+	font-size:1.2rem;
 }	
+.pr_detail.pr_main .pr_info .pay_info .price dd,
+.pr_detail.pr_main .pr_info .pay_info .beauty_point dd,
 .pr_detail.pr_main .pr_info .pay_info .discount dd {
-	font-size:1.4rem;
+	font-size:12px; 
+	font-size:1.2rem;
 }
 .pr_detail.pr_main .pr_info .pay_info .benefit dd a {
 	float:none;
@@ -1468,6 +1482,8 @@
 	width:100%;
 }
 .pr_detail.pr_main .pr_info .select_group .select {
+	font-size:12px;
+	font-size:1.2rem;
 	height:auto;
 }
 .pr_detail.pr_main .pr_info .select_group .select_name {
@@ -1496,6 +1512,7 @@
 .pr_detail.pr_main .pr_info .all_price {
 	padding-right:0;
 }
+.pr_detail.pr_main .pr_info .all_price .price, .pr_detail.pr_main .pr_info .all_price .unit{font-size:20px; font-size:2.0rem;}
 .pr_detail.pr_main .pr_info .btn_group {
 	margin-right:0;
 }
@@ -1510,8 +1527,9 @@
 	display:inline;
 }
 .pr_detail.feature .feature_motion {
-	left:0;
-	margin-left:120px;
+	/*left:0;*/
+	/*margin-left:120px;*/
+	display:none;s
 }
 .pr_detail.effect .tab {
 	width:100%;

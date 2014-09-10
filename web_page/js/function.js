@@ -367,8 +367,8 @@ var thumbnail = (function(){
 	
 	var hCount = 0;
 	var vCount = 0;
-	var defaultHeight = 70;
-	var defaultWidth = 70;
+	var defaultHeight = 68;
+	var defaultWidth = 68;
 
 	return {
 		/**
