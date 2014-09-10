@@ -78,7 +78,7 @@ var slide = (function(){
 					max = 0,
 					tx = 0;
 				
-				moveWidth = thumbs.find('img').width() + margin; // margin+border
+				moveWidth = thumbs.eq(0).width() + margin; // margin+border
 				ulWidth = thumbs.length * moveWidth;
 				thumbs.eq(0).parent().css({ width : ulWidth, left : 0 });
 				

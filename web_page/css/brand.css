@@ -38,7 +38,7 @@
 .about h1 img {
 	display:inline;
 }
-.about p {
+.about div.text {
 	margin-top:18px;
 	padding-bottom:44px;
 	line-height:1.45;
@@ -48,7 +48,7 @@
 	background:url(../images/brand/bg_about_p.png) no-repeat 50% 100%;
 	word-break:keep-all;
 }
-.about p span{
+.about div.text span{
 	font-family: 'Libre Baskerville', serif;
 	font-style:italic;
 	color:#e5a680;
@@ -73,7 +73,7 @@
 	height:400px;
 	background:url(../images/brand/bg_about_04.jpg) no-repeat 50% 0;
 }
-.about.making_story {
+.about.making_story{
 	position:relative;
 	padding:0;
 }
@@ -88,15 +88,16 @@
 	font-size:20px;
 	font-size:2rem;
 	background:none;
+	color:#fff;
 }
 .about.making_story a {
 	position:absolute;
-	right:40px;
+	right:5%;
 	bottom:31px;
-	width:116px;
+	width:95px;
 	height:22px;
-	font-size:15px;
-	font-size:1.5rem;
+	font-size:12px;
+	font-size:1.2rem;
 	line-height:22px;
 	font-family:'Lato', sans-serif;
 	color:#fff;
@@ -123,6 +124,8 @@
 }
 
 @media screen and ( max-width:767px ){
+	
+br{display:none;}
 
 .about {
 	padding:50px 5% 0;
@@ -145,22 +148,31 @@
 }
 .about h1 {
 	margin-top:30px;
-	font-size:2.3rem;
+	font-size:18px;
+	font-size:1.8rem;
 }
-.about p {
+.about div.text {
 	margin-bottom:50px;
-	font-size:1.5rem;
+	font-size:12px;
+	font-size:1.2rem;
+	text-align:justify;
 }
+.about.benefit div.text{
+	text-align:center;
+}
+.about div.text span{display:block;}
 #container .about.making_story .inner_section {
 	width:auto;
 	padding:0;
 	min-width:0;
 	padding-top:60px;
-	height:144px;
+	height:130px;
 }
 #container .about.making_story .inner_section p {
 	font-size:1.6rem;
-	padding: 0 10px;
+	padding: 0 5%;
+	color:#fff;
+	line-height:1.6;
 }
 
 
@@ -330,6 +342,7 @@
 	font-size:14px;
 	color:#666;
 	word-break:keep-all;
+	text-align:justify;
 }
 #design.making_detail ul li.color p {
 	padding-right:0;
@@ -545,11 +558,11 @@
 }
 .making_detail .making_bottom a {
 	position:absolute;
-	right:40px;
+	right:5%;
 	bottom:31px;
 	height:22px;
-	font-size:15px;
-	font-size:1.5rem;
+	font-size:12px;
+	font-size:1.2rem;
 	line-height:22px;
 	font-family: 'Nanum Gothic', ng, serif;
 	color:#fff;
@@ -557,7 +570,7 @@
 	background:url(../images/brand/icon_arrow.png) no-repeat 100% 0;
 }
 #design.making_detail .making_bottom a {
-	width:131px;
+	width:98px;
 }
 #tech.making_detail .making_bottom a {
 	width:164px;
@@ -618,6 +631,8 @@
 .making_intro .inner_section > p {
 	margin:26px auto 0;
 	width:209px;
+	font-size:13px;
+	font-size:1.3rem;
 }
 .making_intro .inner_section > div {
 	width:294px;
@@ -632,11 +647,12 @@
 .making_intro .inner_section > div a p > span {
 	padding-left:0;
 	padding-right:0;
-	font-size:1.5rem;
+	font-size:13px;
+	font-size:1.3rem;
 }
 .making_intro .inner_section > div a p > span > span {
 	display:block;
-	margin-top:3px;
+	margin-top:6px;
 }
 .making_intro .inner_section > div a[href="#design"] {
 	background-size:100%;
@@ -654,12 +670,15 @@
 	background-position:60% 0;
 }
 .making_detail .detail_header h1 {
-	font-size:3rem;
+	font-size:25px;
+	font-size:2.5rem;
 }
 .making_detail .detail_header p {
 	margin:19px auto 0;
 	width:95%;
-	font-size:1.5rem;
+	font-size:13px;
+	font-size:1.3rem;
+	text-align:justify;
 	word-break:keep-all;
 }
 #tech.making_detail .detail_header h1 {
@@ -675,8 +694,14 @@
 #design.making_detail ul li {
 	padding:280px 0 0 0;
 }
+#design.making_detail ul li h2{
+	font-size:25px;
+	font-size:2.5rem;
+}
 #design.making_detail ul li p {
 	padding-right:0;
+	font-size:13px;
+	font-size:1.3rem;
 }
 #design.making_detail ul li.logo {
 	background-size:264px;
@@ -928,8 +953,10 @@
 }
 .brand_gallery .brand_gallery_view p {
 	margin-top:30px;
-	font-size:16px;
+	font-size:14px;
+	font-size:1.4rem;
 	line-height:1.7;
+	text-align:justify;
 }
 
 .brand_gallery .lastest_post {
@@ -1040,13 +1067,15 @@
 	line-height:1.2;
 }
 .brand_gallery .brand_gallery_list .new_post .text h1 {
-	padding-top:24px;
-	font-size:20px;
-	font-size:2rem;
+	font-size:17px;
+	font-size:1.7rem;
+	padding:24px 10px 0;
+	line-height:1.6;
 }
 .brand_gallery .brand_gallery_list .new_post .text p {
 	font-size:15px;
 	font-size:1.5rem;
+	line-height:1.6;
 }
 
 .brand_gallery .media_post ul {
@@ -1064,12 +1093,25 @@
 	margin-right:5px;
 }
 
+.brand_gallery .brand_gallery_view h1{
+	font-size:20px;
+	font-size:2.0rem;
+	padding:0 25px;
+}
+
+.brand_gallery .brand_gallery_view p{
+	font-size:13px;
+	font-size:1.3rem;
+	text-align:justify;
+}
+
 .brand_gallery .lastest_post .slide_container {
 	width:482px;
 }
 .brand_gallery .lastest_post .btns_slide button {
 	background-image:url(../images/brand/bg_btn_arrow_02.gif);
 }
+
 
 }
 

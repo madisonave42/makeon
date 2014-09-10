@@ -143,12 +143,12 @@
 }
 .index.brand_story a {
 	position:absolute;
-	right:40px;
+	right:5%;
 	bottom:31px;
-	width:106px;
+	width:88px;
 	height:22px;
-	font-size:15px;
-	font-size:1.5rem;
+	font-size:12px;
+	font-size:1.2rem;
 	line-height:22px;
 	font-family:'Lato', sans-serif;
 	color:#fff;
@@ -207,6 +207,8 @@
 .tablet_img {display:none;}
 .mobile_img {display:none;}
 
+br{display:none;}
+
 /*
 #container .index.video .inner_section,
 #container .index.video .inner_section a {
@@ -223,7 +225,8 @@
 */
 .index.video .btn_view {
 	bottom:10px!important;
-	font-size:13px;
+	font-size:12px;
+	font-size:1.2rem;
 	width:84px;
 	height:33px!important;
 	margin-left:-42px;
@@ -270,7 +273,7 @@
 .index.visual_section_2 .text_area,
 .index.visual_section_1 .text_area {
 	position:static;
-	padding:0 20px;
+	padding:0 40px;
 	box-sizing:border-box;
 }
 .index.visual_section_2 .text_area h1,
@@ -279,25 +282,29 @@
 	top:44px;
 	left:0;
 	width:100%;
+	font-size:16px;
 	font-size:1.6rem;
 }
 .index p {
-	font-size:1.3rem;
+	font-size:12px;
+	font-size:1.2rem;
 	color:#fff;
 }
 .index p.slogan {
 	margin-top:15px;
-	font-size:2rem;
+	font-size:16px;
+	font-size:1.6rem;
 	color:#fff;
 }
 .index.visual_section_1 .arrow a,
 .index.visual_section_2 .arrow a {
 	top:auto;
-	bottom:93px;
+	bottom:105px;
 	width:13px;
 	height:26px;
 	background:url(../images/index/arrow_mobile.png) no-repeat;
 }
+.index.visual_section_1 .arrow a{bottom:170px;}
 .index.visual_section_1 .arrow a.left,
 .index.visual_section_2 .arrow a.left {
 	left:0;
@@ -310,9 +317,11 @@
 .index.visual_section_2 .text_area .btn_detail,
 .index.visual_section_1 .text_area .btn_detail {
 	margin-top:10px;
-	width:100px;
+	width:80px;
+	height:33px;
 	color:#fff;
-	font-size:1.4rem;
+	font-size:12px;
+	font-size:1.2rem;
 	border-bottom:2px solid #fff;
 }
 .index.visual_section_2 .control,
