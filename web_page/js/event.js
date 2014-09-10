@@ -259,7 +259,12 @@ $(function(){
 			}
 			
 			// auto play visual_section_1
-			tId = setInterval( function(){ ir1.setIndex( $ir1Wrap, $ir1Obj, 'left', 2500 ); }, 7000 );
+			tId = setInterval( function(){
+				done = false;
+				ir1.setIndex( $ir1Wrap, $ir1Obj, 'left', 2500 );
+				setTimeout(function(){done = true;}, 2500);
+			}, 7000 );
+				
 		});
 		
 		$(window).on('resize', function(){
@@ -272,7 +277,11 @@ $(function(){
 		// play & stop
 		$('.control .play').on('click', function(e){
 			e.preventDefault();
-			tId = setInterval( function(){ ir1.setIndex( $ir1Wrap, $ir1Obj, 'left', 2500 ); }, 7000 );
+			tId = setInterval( function(){ 
+				done = false;
+				ir1.setIndex( $ir1Wrap, $ir1Obj, 'left', 2500 );
+				setTimeout(function(){done = true;}, 2500);
+			}, 7000 );
 		});
 		$('.control .pause').on('click', function(e){
 			e.preventDefault();
@@ -744,7 +753,7 @@ $(function(){
 		});
 		
 		// mobile swipe
-		if( $('section').is('.pr_detail') && $prObj.length>=3 ){
+		if( $('section').is('.pr_detail') ){
 			var prObjLength = $prObj.length;
 			
 				// swipe start
@@ -783,10 +792,17 @@ $(function(){
 	
 	// 제품 이미지 thumbnail
 	(function(){
-		$('.pr_detail.pr_main .img_wrap>div>a').on('click' , function(event){
+		$('.pr_detail.pr_main .img_wrap>div').on('click' , function(event){
 			event.preventDefault();
+			
+			var $imgWrap = $('.pr_detail.pr_main .big_img_wrap');
+			var thumbCount = $imgWrap.find('div').size();
+			var imageIndex = $(this).index();
+			var bigImageWidth = $('.pr_detail.pr_main .big_img_list img').outerWidth();
+			bigImage.sliding( $imgWrap, imageIndex, thumbCount, 1, bigImageWidth );
+			
 			$('.pr_detail.pr_main .thumb_cover').removeClass('on');
-			$(this).next('.thumb_cover').addClass('on');
+			$(this).find('.thumb_cover').addClass('on');
 		});
 		
 		$('.pr_detail.pr_main .thumb_count .up').on('click' , function(event){
@@ -816,8 +832,19 @@ $(function(){
 			}
 		});
 	
-		$(window).on('resize', function() {
-			$('.pr_detail.pr_main .img_wrap').css({top:0,left:0});
+		$(window).on('load resize', function() {
+			$('.pr_detail.pr_main .img_wrap, .pr_detail.pr_main .big_img_wrap').css({top:0,left:0});
+			$('.pr_detail.pr_main .thumb_cover').removeClass('on');
+			$('.pr_detail.pr_main .thumb_cover:first').addClass('on');
+			$('.pr_detail.pr_main .big_img_list img').css({
+				width:$('.pr_detail.pr_main .big_img_list').width(),
+			});
+			var bigImageWidth = $('.pr_detail.pr_main .big_img_list img').outerWidth();
+			var bigImageLength = $('.pr_detail.pr_main .big_img_wrap div').size();
+			$('.pr_detail.pr_main .big_img_wrap').css({
+				width: bigImageWidth * bigImageLength
+			});
+			
 		});
 	})();
 	 

@@ -78,7 +78,7 @@ var slide = (function(){
 					max = 0,
 					tx = 0;
 				
-				moveWidth = thumbs.eq(0).width() + margin; // margin+border
+				moveWidth = thumbs.find('img').width() + margin; // margin+border
 				ulWidth = thumbs.length * moveWidth;
 				thumbs.eq(0).parent().css({ width : ulWidth, left : 0 });
 				
@@ -188,7 +188,7 @@ Rolling = function( $banner ){
 	
 	this.$currentBanner;
 	this.$nextBanner;
-	this.bannerSize = $banner.length;
+	//this.bannerSize = $banner.length;
 	this.currentIndex = 0;
 	this.nextIndex;
 	this.isMoving;
@@ -200,6 +200,7 @@ Rolling = function( $banner ){
 	Rolling.prototype.sizing = function($bannerItem){
 		this.bannerWidth = $bannerItem.width();
 		$bannerItem.eq(this.currentIndex).siblings().css({left:this.bannerWidth});
+		this.bannerSize = $bannerItem.length;
 	};
 	
 	Rolling.prototype.init = function($bannerItem){
@@ -207,10 +208,14 @@ Rolling = function( $banner ){
 	};
 	
 	Rolling.prototype.paging = function($bannerWrap){
-		for(i=1;i<=this.bannerSize;i++){
+		
+		var cloneNum = $('.pr_detail.visual .carousel div').is('.clone') ? cloneNum=2 : cloneNum=0;
+		var pageNum = this.bannerSize-cloneNum;
+		
+		for(i=1;i<=pageNum;i++){
 			$bannerWrap.find('.paging').append('<div class="page_' + i + '">'+ i +'</div>');
 		}
-		$bannerWrap.find('.paging').css({'width' : ( $bannerWrap.find('.paging div').width() + 5 ) * this.bannerSize });
+		$bannerWrap.find('.paging').css({'width' : ( $bannerWrap.find('.paging div').width() + 5 ) * pageNum });
 		$bannerWrap.find('.control').css({'margin-left' : $bannerWrap.find('.control').width() / -2});
 		
 		//paging
@@ -241,8 +246,15 @@ Rolling = function( $banner ){
 		$nextBanner.stop().animate({left:0}, speed, 'easeInOutQuint');
 		$nextText.stop().animate({left:0}, speed, 'easeInOutQuint');
 		
+		var pageIndex = nextIndex;
+		if( $('.pr_detail.visual .carousel div').is('.clone') ){
+			switch( pageIndex ){
+				case 2 : pageIndex = 0; break;
+				case 3 : pageIndex = 1; break;
+			}
+		}
 		$bannerWrap.find('.control .paging>div').removeClass('current');
-		$bannerWrap.find('.control .paging>div').eq(nextIndex).addClass('current');
+		$bannerWrap.find('.control .paging>div').eq(pageIndex).addClass('current');
 		
 		this.currentIndex = nextIndex;
 	};
@@ -260,8 +272,15 @@ Rolling = function( $banner ){
 		$nextBanner.stop().animate({left:0}, speed, 'easeInOutQuint');
 		$nextText.stop().animate({left:0}, speed, 'easeInOutQuint');
 		
+		var pageIndex = nextIndex;
+		if( $('.pr_detail.visual .carousel div').is('.clone') ){
+			switch( pageIndex ){
+				case 2 : pageIndex = 0; break;
+				case 3 : pageIndex = 1; break;
+			}
+		}
 		$bannerWrap.find('.control .paging>div').removeClass('current');
-		$bannerWrap.find('.control .paging>div').eq(nextIndex).addClass('current');
+		$bannerWrap.find('.control .paging>div').eq(pageIndex).addClass('current');
 		
 		this.currentIndex = nextIndex;
 	};
@@ -294,8 +313,16 @@ Rolling = function( $banner ){
 				//$bannerItem.eq( this.prevTouchedIndex ).stop().animate({left:-this.bannerWidth*2}, 100);
 				$bannerItem.eq( this.nextTouchedIndex ).stop().animate({left:0}, 100);
 				
+				var pageIndex = this.nextTouchedIndex;
+				if( $('.pr_detail.visual .carousel div').is('.clone') ){
+					switch( pageIndex ){
+						case 2 : pageIndex = 0; break;
+						case 3 : pageIndex = 1; break;
+					}
+				}
+				
 				$bannerWrap.find('.control .paging>div').removeClass('current');
-				$bannerWrap.find('.control .paging>div').eq(this.nextTouchedIndex).addClass('current');
+				$bannerWrap.find('.control .paging>div').eq(pageIndex).addClass('current');
 				
 				this.currentIndex = this.nextTouchedIndex;
 			// prev	
@@ -303,9 +330,17 @@ Rolling = function( $banner ){
 				$bannerItem.eq( this.currentIndex ).stop().animate({left:this.bannerWidth}, 100);
 				$bannerItem.eq( this.prevTouchedIndex ).stop().animate({left:0}, 100);
 				//$bannerItem.eq( this.nextTouchedIndex ).stop().animate({left:this.bannerWidth*2}, 100);
+				
+				var pageIndex = this.prevTouchedIndex;
+				if( $('.pr_detail.visual .carousel div').is('.clone') ){
+					switch( pageIndex ){
+						case 2 : pageIndex = 0; break;
+						case 3 : pageIndex = 1; break;
+					}
+				}
 
 				$bannerWrap.find('.control .paging>div').removeClass('current');
-				$bannerWrap.find('.control .paging>div').eq(this.prevTouchedIndex).addClass('current');
+				$bannerWrap.find('.control .paging>div').eq(pageIndex).addClass('current');
 				
 				this.currentIndex = this.prevTouchedIndex;
 			}
@@ -342,34 +377,54 @@ var thumbnail = (function(){
 		 */
 		sliding : function( $imgWrap, currentPosition, thumbCount, viewNum, direction ){
 			if(direction == 'up'){
-				if (vCount > -( thumbCount - viewNum ) ){
-					$imgWrap.stop().animate({top : parseInt(currentPosition) - defaultHeight});
-					vCount--;
+				if (vCount < ( thumbCount - viewNum ) ){
+					vCount++;
+					$imgWrap.stop().animate({top : -defaultHeight*vCount});
 				} else {
 					return false;
 				}
 			} else if(direction == 'down') {
-				if (vCount < 0 ){
-					$imgWrap.stop().animate({top : parseInt(currentPosition) + defaultHeight});
-					vCount++;
+				if (vCount >= 1 ){
+					vCount--;
+					$imgWrap.stop().animate({top : -defaultHeight*vCount });
 				} else {
 					return false;
 				}
 			}	else if(direction == 'left') {
-				if (hCount > -( thumbCount - viewNum )){
-					$imgWrap.stop().animate({left : parseInt(currentPosition) - defaultWidth});
-					hCount--;
+				if (hCount < ( thumbCount - viewNum )){
+					hCount++;
+					$imgWrap.stop().animate({left : -defaultWidth*hCount});
 				} else {
 					return false;
 				}
 			} else {
-				if (hCount < 0 ){
-					$imgWrap.stop().animate({left : parseInt(currentPosition) + defaultWidth});
-					hCount++;
+				if (hCount >= 1 ){
+					hCount--;
+					$imgWrap.stop().animate({left :-defaultWidth*hCount});
 				} else {
 					return false;
 				}
 			}
+		}
+	};
+})();
+
+/**
+ * 프로덕트 big imge sliding
+ * @namespace 프로덕트 big image sliding
+ * 
+ */
+var bigImage = (function(){
+	
+	var hCount = 0;
+
+	return {
+		/**
+		 * 프로덕트 big image sliding
+		 * 
+		 */
+		sliding : function( $imgWrap, imageIndex, thumbCount, viewNum, imageWidth ){
+			$imgWrap.stop().animate({left : -imageWidth*imageIndex});
 		}
 	};
 })();
