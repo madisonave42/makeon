@@ -420,12 +420,13 @@
 	float:left;
 	margin-top:40px;
 	margin-left:20px;
+	width:440px;
+	text-align:justify;
 }
 .campaign .campaign_main .campaign_benefit > p {
 	margin-top:10px;
 	font-size:13px;
 	font-size:1.3rem;
-	width:240px;
 	color:#666;
 	line-height:1.5;
 }
@@ -638,6 +639,10 @@
 }
 .campaign .weekly_best ul li:first-child {
 	margin-left:10px;
+}
+
+.campaign .weekly_best ul li > a{
+	margin:17px auto 0;
 }
 
 }
