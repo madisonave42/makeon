@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>makeON</title>
+	
+	<!-- For old IE -->
+	<!--[if lt IE 9]>
+	<script src="js/lib/html5shiv.js"></script>
+	<![endif]-->
+	<!--// For old IE -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,900|Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/default.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	
+	<script src="js/lib/jquery-1.11.0.min.js"></script>
+	<script src="js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/function.js"></script>
+	<script src="js/event.js"></script>
+</head>
+<body>
+<section class="skip">
+	<h1 class="hide">skip</h1>
+	<dl>
+		<dt class="hide">바로가기 메뉴</dt>
+		<dd><a href="#gnb">메인메뉴 바로가기</a></dd>
+		<dd><a href="#container">본문 바로가기</a></dd>
+	</dl>
+</section>
+<div class="mo_wrap">
+	<h1 class="hide">makeON 웹사이트</h1>
+	<!-- 0716 변경 -->
+	<header>
+		<section class="header_main">
+			<div class="inner_section">
+				<h1 class="hide">Header Main</h1>
+				<section class="makeon_logo">
+					<h1><strong class="hide">makeON 로고</strong><a href="/"><img src="images/common/logo.png" alt="makeon logo" title="makeon logo" /></a></h1>
+				</section>
+				<nav id="gnb">
+					<h1 class="hide">makeON 메인 메뉴</h1>
+					<ul>
+						<li class="brand">
+							<a href="#">BRAND</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Brand story</a></li>
+									<li class="last"><a href="#">Making story</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="product">
+							<a href="#">PRODUCT</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li class="cleansing_enhancer"><a href="#">Cleansing enhancer</a></li>
+									<li class="face_enhancer"><a href="#">Makeup enhancer</a></li>
+									<li class="special"><a href="#">Special kit</a></li>
+									<li class="accessory last"><a href="#">Accessory</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="life">
+							<a href="#">LIFE BEAUTY</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Campaign</a></li>
+									<li class="last"><a href="#">From MakeON</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="event_menu">
+							<a href="#">EVENT</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="menu_shop">
+					<h2 class="hide">makeON 쇼핑 메뉴</h2>
+					<!-- login 상태와 logout 상태 모두 추가 -->
+					<!-- logout 상태 -->
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">주문/배송조회</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li class="shopping_bag">
+							<a href="#">쇼핑백</a>
+							<a class="count_bubble">
+								<div class="pr_count">12</div><span></span>
+							</a>
+						</li>
+					</ul>
+					<!-- login 상태 -->
+					<!--
+					<ul>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li class="shopping_bag">
+							<a href="#">쇼핑백</a>
+							<a class="count_bubble">
+								<div class="pr_count">12</div><span></span>
+							</a>
+						</li>
+					</ul>
+					-->
+				</nav>
+				<!-- mobile -->
+				<section class="btn_hide_menu">
+					<a href="#" class="bar" id="test">menu bar</a>
+				</section>
+			</div>
+		</section>
+		<section class="header_util">
+			<h1 class="hide">Header Util</h1>
+			<div class="inner_section">
+				<nav class="menu_guide">
+					<h2 class="hide">makeON 고객 메뉴</h2>
+					<ul>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">오프라인매장안내</a></li>
+						<li><a href="#">AskON</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		
+	</header>
+	<!--// 0716 변경 -->
+	
+	<!-- 0715 [D] 전반적 변경 -->
+	<section id="container" class="exhibit">
+		
+		<section class="index video">
+			<div class="inner_section">
+				
+				<a href="product/MO_PR_001_product_list.html" class="video_area">
+					<video id="video1" loop muted poster="images/index/alt_video.jpg">
+				    <source src="video/index.mp4" type="video/mp4">
+				    <source src="video/index.ogg" type="video/ogg">
+				   	<img src="images/index/alt_video.jpg" />
+				  </video>
+			  </a>
+			  <a href="#" class="btn_view view_original">전체영상보기</a>
+			 
+			</div>
+		</section>
+		
+		<section class="index visual_section_2">
+			<div class="inner_section">
+				<div class="img_section">
+					
+					<!-- 0721 수정 -->
+					<div class="visual">
+						<div class="image_area">
+							<!-- 일반이미지 클래스 web_img -->
+							<img src="images/index/visual_2-1.jpg" alt="" class="web_img" />
+							<!-- 태블릿이미지 클래스 tablet_img -->
+							<img src="images/index/visual_2-1_tablet.jpg" alt="" class="tablet_img" />
+							<!-- 모바일이미지 클래스 mobile_img -->
+							<img src="images/index/visual_2-1_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Life Beauty Tips</h1>
+							<p class="slogan">FIRMING <span>CLEANSING</span></p>
+							<p>28세, 느슨해진 피부를 위한 새로운 탄력케어</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<div class="visual">
+						<div class="image_area">
+							<img src="images/index/visual_2-2.jpg" alt="" class="web_img" />
+							<img src="images/index/visual_2-2_tablet.jpg" alt="" class="tablet_img" />
+							<img src="images/index/visual_2-2_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Life Beauty Tips</h1>
+							<p class="slogan">SUMMER <span>CLEANSING</span></p>
+							<p>여름 피부 스마트 클렌징</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<div class="visual">
+						<div class="image_area">
+							<img src="images/index/visual_2-3.jpg" alt="" class="web_img" />
+							<img src="images/index/visual_2-3_tablet.jpg" alt="" class="tablet_img" />
+							<img src="images/index/visual_2-3_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Life Beauty Tips</h1>
+							<p class="slogan">AIR-FIT <span>MAKE UP</span></p>
+							<p>스트레스 프리 (Stress-free), 에어핏 메이크업</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<div class="visual">
+						<div class="image_area">
+							<img src="images/index/visual_2-4.jpg" alt="" class="web_img" />
+							<img src="images/index/visual_2-4_tablet.jpg" alt="" class="tablet_img" />
+							<img src="images/index/visual_2-4_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Life Beauty Tips</h1>
+							<p class="slogan">NIGHT CARE</p>
+							<p>잠들기 전, 안색을 맑게하는 순환 케어</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<!-- // 0721 수정 -->
+				</div>
+				
+				<div class="arrow">
+					<div class="btn_wrap left_wrap">
+						<a href="#" class="left">left</a>
+					</div>
+					<div class="btn_wrap right_wrap">
+						<a href="#" class="right">right</a>
+					</div>
+				</div>
+				
+				<div class="control">
+					<div class="paging"> </div>
+				</div>
+				
+			</div>
+		</section>
+		
+		<section class="index visual_section_1">
+			<div class="inner_section">
+				<div class="img_section">
+					<!-- 0721 수정 -->
+					<div class="visual">
+						<div class="image_area">
+							<!-- 일반이미지 클래스 web_img -->
+							<img src="images/index/visual_1-1.jpg" alt="" class="web_img" />
+							<!-- 태블릿이미지 클래스 tablet_img -->
+							<img src="images/index/visual_1-1_tablet.jpg" alt="" class="tablet_img" />
+							<!-- 모바일이미지 클래스 mobile_img -->
+							<img src="images/index/visual_1-1_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Promotion <span>&amp;</span> Event</h1>
+							<p class="slogan">9월, 화사하고 돋보이는 신부를 위한 기프트 세트</p>
+							<p>인생에서 가장 아름답고 싶은 순간을 맞이하는 예비 신부들을 위한</p>
+							<p>클렌징 인핸서 브라이덜 기프트 세트가 출시됩니다</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<div class="visual">
+						<div class="image_area">
+							<img src="images/index/visual_1-2.jpg" alt="" class="web_img" />
+							<img src="images/index/visual_1-2_tablet.jpg" alt="" class="tablet_img" />
+							<img src="images/index/visual_1-2_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Promotion <span>&amp;</span> Event</h1>
+							<p class="slogan">브랜드 런칭 기념 기프트 증정 프로모션</p>
+							<p>런칭 기간동안 공식 온라인 몰에서 제품을 구매하신 모든 고객분들께</p>
+							<p>MakeON이 준비한 특별한 선물을 드립니다.</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<div class="visual">
+						<div class="image_area">
+							<img src="images/index/visual_1-3.jpg" alt="" class="web_img" />
+							<img src="images/index/visual_1-3_tablet.jpg" alt="" class="tablet_img" />
+							<img src="images/index/visual_1-3_mobile.jpg" alt="" class="mobile_img" />
+						</div>
+						<div class="text_area">
+							<h1>Promotion <span>&amp;</span> Event</h1>
+							<p class="slogan">MAKE REAL CHANGE GAMPAIGN</p>
+							<p>당신의 뷰티의 일상이 더 나은 방향으로 변화될 수 있도록 응원하는</p>
+							<p>메이크온 라이프 뷰티 캠페인에 참여하시고 본품 체험의 기회를 얻어보세요.</p>
+							<a href="#" class="btn_detail">자세히보기</a>
+						</div>
+					</div>
+					<!-- // 0721 수정 -->
+					
+				</div>
+				
+				<div class="arrow">
+					<div class="btn_wrap left_wrap">
+						<a href="#" class="left">left</a>
+					</div>
+					<div class="btn_wrap right_wrap">
+						<a href="#" class="right">right</a>
+					</div>
+				</div>
+				
+				<div class="control">
+					<div href="#" class="play">play</div>
+					<div class="paging"> </div>
+					<div href="#" class="pause">pause</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="index brand_story">
+			<div class="inner_section">
+				<p>메이크온은 뷰티의 일상을 바꾸는 라이프 뷰티 디바이스 브랜드입니다.</p>
+				<a href="#">Brand story</a>
+			</div>
+		</section>
+	</section>
+	<!-- 0715 [D] 전반적 변경 -->
+
+	<!-- 0813 수정 -->
+	<footer>
+		<section class="web_footer">
+			<h1 class="hide">Footer - Terms, Address, Etc</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#" class="privacy">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : <a href="#" class="no_style">106-86-43373</a> <a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1068643373" class="btn_infopop">사업자 정보 확인</a></address>
+			<div class="tel">통신판매업신고번호 : 용산05823호 | 고객센터(수신자요금부담) <a href="#" class="no_style">080-030-5454</a> | FAX : <a href="#" class="no_style">031-591-6085</a> <a href="https://pgweb.dacom.net/pg/wmp/mertadmin/jsp/mertservice/s_escrowYn.jsp?mertid=X_2014momall" class="btn_infopop btn_escro">에스크로 확인</a></div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+			</div>
+		</section>
+		<section class="mobile_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#" class="privacy">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관<br />5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배</address>
+			<div class="license">사업자등록번호:<a href="#" class="no_style">106-86-43373</a> | 통신판매업신고번호:용산05823호</div>
+			<div class="tel">고객센터(수신자요금부담) <a href="#" class="no_style">080-030-5454</a> | FAX : <a href="#" class="no_style">031-591-6085</a></div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="links">
+				<a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1068643373" class="btn_infopop">사업자 정보 확인</a>
+				<a href="https://pgweb.dacom.net/pg/wmp/mertadmin/jsp/mertservice/s_escrowYn.jsp?mertid=X_2014momall" class="btn_infopop btn_escro">에스크로 확인</a>
+			</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+			</div>
+		</section>
+	</footer>
+	<!--// 0721 수정 -->
+</div>
+
+<!-- 0721 수정 -->
+<div class="welcome_popup">
+	<a href="#" class="close"><img src="images/index/welcome.png" alt="Welcome to makeON 일상 속에서 즐기는 보다 효과적인 뷰티케어 메이크온 공식 브랜드 사이트 &amp; 스토어" /></a>
+</div>
+
+<div class="original_video">
+	<div class="video_container">
+		<iframe width="560" height="315" src="http://www.youtube.com/embed/ZiENxa0WHaE" frameborder="0" allowfullscreen></iframe>
+		<a href="#" class="video_close">Close</a>
+	</div>
+</div>
+<!-- 0721 수정 -->
+
+</body>
+</html>

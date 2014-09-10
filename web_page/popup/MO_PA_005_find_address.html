@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>우편번호 검색</title>
+	<meta name="description" content="">
+	<meta name="author" content="Administrator">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900|Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/popup.css"/>
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/popup.js"></script>
+</head>
+<!-- [D] 팝업창 너비 440px  -->
+<body>
+<header>
+	<h1>우편번호 검색</h1>
+</header>
+<div id="contents">
+	<div class="find_address">
+		<nav>
+			<ul>
+				<li><a href="#old_addr" class="tab_old on">구주소-지번주소</a></li>
+				<li><a href="#new_addr" class="tab_new">도로명주소</a></li>
+			</ul>
+		</nav>
+		<section id="old_addr" class="step01 on">
+			<h1 class="hide">구주소-지번주소</h1>
+			<p><span>찾으시는 주소의 읍/면/동을 입력하세요.</span> (예: 갈현동)</p>
+			<div class="info_box">
+				<div class="info_box_inner">
+					<label for="old_keyword">지번/도로명</label>
+					<input type="text" id="old_keyword" />
+					<input type="submit" value="검색" class="btn_search" />
+				</div>
+			</div>
+			<div class="result">
+				<p><span>“영등포동”</span> (으)로 <span>13건</span>의 결과가 있습니다.</p>
+				<div class="result_addr_list">
+					<h2>주소</h2>
+					<div class="addr_list_wrap">
+						<ul>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // #old_addr -->
+		<section id="new_addr" class="step01">
+			<h1 class="hide">도로명주소</h1>
+			<div class="select_way">
+				<span class="new_type01">
+					<input type="radio" name="new_way" id="new_type01" checked="checked" /><label for="new_type01">건물명(아파트명)으로 찾기</label>
+				</span>
+				<span>
+					<input type="radio" name="new_way" id="new_type02" /><label for="new_type02">도로명으로 찾기</label>
+				</span>
+			</div>
+			<div class="way on">
+				<p>시/도 및 시/군/ 구 선택 후 건물명을 입력해주세요.</p>
+				<div class="info_box">
+					<div class="info_box_inner">
+						<div>
+							<label for="new_way_cate01">시/도</label>
+							<select id="new_way_cate01" class="new_way_cate01">
+								<option>서울특별시</option>
+								<option>경기도</option>
+							</select>
+							<label for="new_way_cate02">시/군/구</label>
+							<select id="new_way_cate02" class="new_way_cate02">
+								<option>강서구</option>
+								<option>강북구</option>
+							</select>
+						</div>
+						<div>
+							<label for="new_way01_keyword">건물명</label>
+							<input type="text" id="new_way01_keyword" />
+							<input type="submit" value="검색" class="btn_search" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // .way01 -->
+			<div class="way">
+				<p>도로명과 건물명을 입력해주세요.</p>
+				<div class="info_box">
+					<div class="info_box_inner">
+						<div>
+							<label for="new_way02_road">도로명</label>
+							<input type="text" id="new_way02_road" class="new_way02_road" />
+						</div>
+						<div>
+							<label for="new_way02_keyword">건물명</label>
+							<input type="text" id="new_way02_keyword" />
+							<input type="submit" value="검색" class="btn_search" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // .way02 -->
+			<div class="result">
+				<p><span>“서울, 영등포구, 센트”</span> (으)로 <span>13건</span>의 결과가 있습니다.</p>
+				<div class="result_addr_list">
+					<h2>주소</h2>
+					<div class="addr_list_wrap">
+						<ul>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+							<li><a href="#">[151-231] 서울특별시 영등포구 영등포동4가</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // #new_addr -->
+		<section class="step02">
+			<div class="info_box">
+				<div class="info_box_inner">
+					<p><span>동/읍/면/리 명 이하의 상세주소를 입력해 주세요.</span><br />예) 99번지 시그니쳐타워 9f</p>
+				</div>
+			</div>
+			<div class="result">
+				<p><span>지역명</span>(150-034) 서울 영등포구 영등포동4가 433번지</p>
+				<p>
+					<label for="addr_detail">상세주소</label>
+					<input type="text" id="addr_detail" />
+				</p>
+			</div>
+			<div class="btns">
+				<a href="#" class="btn_ok">확인</a>
+				<a href="#" class="btn_cancel">재검색</a>
+			</div>
+		</section>
+		<!-- // .step02 -->
+		<section class="step03">
+			<div class="info_box">
+				<div class="info_box_inner">
+					<p><span>makeON에서는 입력하신 주소를 확인하여 우편번호 및 주소가 자동 변환될 수 있습니다.<br />입력하실 주소를 선택해 주세요.</span></p>
+				</div>
+			</div>
+			<div class="result">
+				<p>
+					<input type="radio" name="type" id="addr01" checked="checked" />
+					<label for="addr01"><span>변환주소</span> : (150-034) 서울 영등포구 문래로 180 11 (영등포동 4가 443, 영등포센트럴푸르지오시티</label>
+				</p>
+				<p>
+					<input type="radio" name="type" id="addr02" />
+					<label for="addr02"><span>입력주소</span> : (150-034) 서울 영등포구 영등포동4가 433번지</label>
+				</p>
+			</div>
+			<div class="btns">
+				<a href="#" class="btn_ok">확인</a>
+				<a href="#" class="btn_cancel">재입력</a>
+			</div>
+		</section>
+		<!-- // .step03 -->
+	</div>
+</div>
+</body>
+</html>

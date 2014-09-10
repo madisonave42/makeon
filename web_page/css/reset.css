@@ -1,0 +1,113 @@
+/* 
+ * ##############################################
+ * ######    #########    ##               ###### 
+ * ######  #  #######  #  ##  ###################
+ * ######  ##  #####  ##  ##  ###################
+ * ######  ###  ###  ###  ##              #######
+ * ######  ####  #  ####  ###############  ######
+ * ######  #####   #####  ##  ###########  ######
+ * ######  #############  ##  ###########  ######
+ * ######  #############  ####            #######
+ * ##############################################
+ */
+
+/* ===========================================================================================
+ *	공통스타일
+ * =========================================================================================== */
+
+/* ===========================================================================================
+ *	 http://meyerweb.com/eric/tools/css/reset/ 
+ *  v2.0 | 20110126
+ *  License: none (public domain)
+ *  Reset Css
+ * =========================================================================================== */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* ==========================================================
+ * Server Local Web Font
+ * ========================================================== */
+
+@font-face{
+	font-family:ng;
+	font-weight:normal;
+	src:url(fonts/NanumGothic.eot); /* IE9 호환성 보기 모드 */
+	src:url(fonts/NanumGothic.eot?#iefix) format("embedded-opentype"), /* IE6 ~ IE8 */
+			url(fonts/NanumGothic.woff) format("woff"), /* Modern Browser */
+			url(fonts/NanumGothic.ttf) format('truetype'); /* Safari, Android, Ios */
+}
+
+@font-face{
+	font-family:ng;
+	font-weight:bold;
+	src:url(fonts/NanumGothicBold.eot);
+	src:url(fonts/NanumGothicBold.eot?#iefix) format("embedded-opentype"),
+		url(fonts/NanumGothicBold.woff) format("woff"),
+		url(fonts/NanumGothicBold.ttf) format('truetype');
+}
+
+@font-face{
+	font-family:nm;
+	font-weight:normal;
+	src:url(fonts/NanumMyeongjo.eot); /* IE9 호환성 보기 모드 */
+	src:url(fonts/NanumMyeongjo.eot?#iefix) format("embedded-opentype"), /* IE6 ~ IE8 */
+			url(fonts/NanumMyeongjo.woff) format("woff"), /* Modern Browser */
+			url(fonts/NanumMyeongjo.ttf) format('truetype'); /* Safari, Android, Ios */
+}
+
+@font-face{
+	font-family:nm;
+	font-weight:bold;
+	src:url(fonts/NanumMyeongjoBold.eot);
+	src:url(fonts/NanumMyeongjoBold.eot?#iefix) format("embedded-opentype"),
+		url(fonts/NanumMyeongjoBold.woff) format("woff"),
+		url(fonts/NanumMyeongjoBold.ttf) format('truetype');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom Adding Css Code */
+a {
+	text-decoration: none;
+}
+a:active{background:transparent;}
+input[type=submit], input[type=image], button{
+	cursor: pointer;
+}
+
+img{display:block;}
+
+address{font-style:normal;}

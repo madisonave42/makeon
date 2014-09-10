@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이벤트 | makeON Mall</title>
+	
+	<!-- For old IE -->
+	<!--[if lt IE 9]>
+	<script src="../js/lib/html5shiv.js"></script>
+	<![endif]-->
+	<!--// For old IE -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,900|Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/default.css" />
+	<link rel="stylesheet" href="../css/event.css" />
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="../js/function.js"></script>
+	<script src="../js/event.js"></script>
+</head>
+<body>
+<section class="skip">
+	<h1 class="hide">skip</h1>
+	<dl>
+		<dt class="hide">바로가기 메뉴</dt>
+		<dd><a href="#gnb">메인메뉴 바로가기</a></dd>
+		<dd><a href="#container">본문 바로가기</a></dd>
+	</dl>
+</section>
+<div class="mo_wrap">
+	<h1 class="hide">makeON 웹사이트</h1>
+	<!-- 0704 변경 -->
+	<header>
+		<section class="header_main">
+			<div class="inner_section">
+				<h1 class="hide">Header Main</h1>
+				<section class="makeon_logo">
+					<h1><strong class="hide">makeON 로고</strong><a href="/"><img src="../images/common/logo.png" alt="makeon logo" title="makeon logo" /></a></h1>
+				</section>
+				<nav id="gnb">
+					<h1 class="hide">makeON 메인 메뉴</h1>
+					<ul>
+						<li class="brand">
+							<a href="#">BRAND</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Brand story</a></li>
+									<li class="last"><a href="#">Making story</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="product">
+							<a href="#">PRODUCT</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li class="cleansing_enhancer"><a href="#">Cleansing enhancer</a></li>
+									<li class="face_enhancer"><a href="#">Makeup enhancer</a></li>
+									<li class="special"><a href="#">Special kit</a></li>
+									<li class="accessory last"><a href="#">Accessory</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="life">
+							<a href="#">LIFE BEAUTY</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Campaign</a></li>
+									<li class="last"><a href="#">From MakeON</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="event_menu">
+							<a href="#">EVENT</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="menu_shop">
+					<h2 class="hide">makeON 쇼핑 메뉴</h2>
+					<!-- login 상태와 logout 상태 모두 추가 -->
+					<!-- logout 상태 -->
+					<!--
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li><a href="#">쇼핑백</a></li>
+					</ul>
+					-->
+					<!-- login 상태 -->
+					<ul>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li class="shopping_bag">
+							<a href="#">쇼핑백</a>
+							<a class="count_bubble">
+								<div class="pr_count">12</div><span></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- mobile -->
+				<section class="btn_hide_menu">
+					<a href="#" class="bar" id="test">menu bar</a>
+				</section>
+			</div>
+		</section>
+		<section class="header_util">
+			<h1 class="hide">Header Util</h1>
+			<div class="inner_section">
+				<nav class="menu_guide">
+					<h2 class="hide">makeON 고객 메뉴</h2>
+					<ul>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">오프라인매장안내</a></li>
+						<li><a href="#">askON</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		
+	</header>
+	<!--// 0704 변경 -->
+
+	<section id="container" class="exhibit">
+		<div class="inner_section">
+		
+			<h1 class="hide">Container</h1>
+			
+			<article class="location">
+				<h1 class="hide">location</h1>
+				<em class="home">Home</em>
+				<em>></em>
+				<em class="current">EVENT</em>
+			</article>
+			
+			<section class="contents event end_event">
+				
+				<h1>EVENT</h1>
+				
+				<section>
+					<h1 class="hide">지난 이벤트</h1>
+					
+					<div class="tab">
+						<ul>
+							<li class="tab_1"><a href="#">진행중 이벤트</a></li>
+							<li class="tab_2"><a href="#" class="on">지난 이벤트</a></li>
+							<li class="tab_3"><a href="#">당첨자 발표</a></li>
+						</ul>
+					</div>
+					
+					<section class="event_detail">
+						<div class="heading">
+							<h1>MO 체험단 이벤트</h1>
+							<p class="date"><span>발표일</span>2014.12.23</p>
+						</div>
+						<div class="body">
+							<div class="web_event">
+								<img src="../images/temp/event_detail_web.jpg" alt="이벤트 상세" usemap="#event_web_map" />
+								<map id="event_web_map" name="event_web_map">
+									<area shape="rect" coords="29,612,126,710" href="#" alt="" />
+									<area shape="rect" coords="137,612,234,710" href="#" alt="" />
+									<area shape="rect" coords="380,762,453,836" href="#" alt="" />
+								</map>
+							</div>
+							<div class="mobile_event">
+								<img src="../images/temp/event_detail_mobile.jpg" alt="이벤트 상세" usemap="#event_mobile_map" />
+								<map id="event_mobile_map" name="event_mobile_map">
+									<area shape="rect" coords="16,235,67,286" href="#" alt="" />
+									<area shape="rect" coords="16,410,67,461" href="#" alt="" />
+								</map>
+							</div>
+						</div>
+					</section>
+					
+					<section class="write_comment">
+						<h1>댓글달기</h1>
+						<p class="total">총 <span>15</span>개</p>
+						<div class="write_comment_container">
+							<!-- [D] 로그인하지 않았을 경우 -->
+							<div class="not_login">
+								<a href="#" class="btn_login">통합회원 로그인</a>
+								<a href="#" class="btn_fb_login">페이스북 로그인</a>
+								<p>페이스북 아이디로도 참여 가능합니다.</p>
+							</div>
+							<!-- [D] 로그인 했을경우 -->
+							<!--
+							<p class="id">abd***</p>
+							-->
+							
+							<div class="input_container">
+								<textarea cols="30" rows="10" title="댓글내용 입력">댓글을 달아주세요.</textarea>
+								<div class="attach_img">
+									<input type="file" title="이미지 첨부" />
+								</div>
+								<div class="preview_img">
+									<div>
+										<img src="../images/temp/attached_img.jpg" alt="첨부이미지" />
+										<button type="button" title="삭제">삭제</button>
+									</div>
+									<div>
+										<img src="../images/temp/attached_img.jpg" alt="첨부이미지" />
+										<button type="button" title="삭제">삭제</button>
+									</div>
+								</div>
+							</div>
+							<input type="submit" value="등록하기" class="btn_submit" />
+						</div>
+					</section>
+					
+					<section class="comment_list">
+						<h1 class="hide">댓글 목록</h1>
+						<ul>
+							<li>
+								<article>
+									<p>이벤트 참여 합니다. 꼭 당첨시켜 주세요.<br />좋은 하루 되세요!!</p>
+									<!-- [D] 첨부 이미지가 있을 경우 -->
+									<div class="attached">
+										<img src="../images/temp/attached_img.jpg" alt="첨부이미지" />
+										<img src="../images/temp/attached_img.jpg" alt="첨부이미지" />
+									</div>
+
+									<footer>
+										<p class="author">댓글의아이디</p>
+										<p class="date">2014.04.22 21:34</p>
+										
+										<div class="function">
+											<!-- [D] 답글있을경우 출력 -->
+											<p>답글(<span>2</span>)</p>
+											
+											<a href="#" class="btn_reply">답글달기</a>
+											<a href="#" class="btn_modify">수정</a>
+											<a href="#" class="btn_delete">삭제</a>
+										</div>
+									</footer>
+								</article>
+								
+								<!-- 댓글의 답글달기 -->
+								<section class="write_comment">
+									<h1 class="hide">답글달기</h1>
+									<div class="write_comment_container">
+										<!-- [D] 로그인하지 않았을 경우 -->
+										<!--
+										<div class="not_login">
+											<a href="#" class="btn_login">통합회원 로그인</a>
+											<a href="#" class="btn_fb_login">페이스북 로그인</a>
+											<p>페이스북 아이디로도 참여 가능합니다.</p>
+										</div>
+										-->
+										<!-- [D] 로그인 했을경우 -->
+										<p class="id">abd***</p>
+										
+										<div class="input_container">
+											<textarea cols="30" rows="10" title="댓글내용 입력">이거 짱.
+요즘 이거 하면서 마음 안정 시키고 있어요.</textarea>
+											<div class="attach_img">
+												<input type="file" title="이미지 첨부" />
+											</div>
+										</div>
+										<input type="submit" value="등록하기" class="btn_submit" />
+									</div>
+								</section>
+								
+								<!-- [D] 답글 -->
+								<section class="reply">
+									<h1>답글</h1>
+									<article>
+										<p>이벤트 참여 합니다. 꼭 당첨시켜 주세요.<br />좋은 하루 되세요!!</p>
+										<!-- [D] 첨부 이미지가 있을 경우 -->
+										<div class="attached">
+											<img src="../images/temp/attached_img.jpg" alt="첨부이미지" />
+											<img src="../images/temp/attached_img.jpg" alt="첨부이미지" />
+										</div>
+
+										<footer>
+											<p class="author">답글의아이디</p>
+											<p class="date">2014.04.22 21:34</p>
+											
+											<div class="function">
+												<a href="#" class="btn_modify">수정</a>
+												<a href="#" class="btn_delete">삭제</a>
+											</div>
+										</footer>
+									</article>
+									
+									<article>
+										<p>이벤트 참여 합니다. 꼭 당첨시켜 주세요.<br />좋은 하루 되세요!!</p>
+
+										<footer>
+											<!-- [D] 페이스북 연동 사용자일 경우 아이디 앞에 페이스북 아이콘 표시 -->
+											<p class="author"><img src="../images/event/icon_fb.gif" alt="페이스북 연동 사용자" />답글의아이디</p>
+											<p class="date">2014.04.22 21:34</p>
+											
+											<div class="function">
+												<a href="#" class="btn_modify">수정</a>
+												<a href="#" class="btn_delete">삭제</a>
+											</div>
+										</footer>
+									</article>
+								
+								</section>
+							</li>
+							<li>
+								<article>
+									<p>이벤트 참여 합니다. 꼭 당첨시켜 주세요.<br />좋은 하루 되세요!!</p>
+
+									<footer>
+										<!-- [D] 페이스북 연동 사용자일 경우 아이디 앞에 페이스북 아이콘 표시 -->
+										<p class="author"><img src="../images/event/icon_fb.gif" alt="페이스북 연동 사용자" />댓글의아이디</p>
+										<p class="date">2014.04.22 21:34</p>
+										
+										<div class="function">
+											<a href="#" class="btn_reply">답글달기</a>
+											<a href="#" class="btn_modify">수정</a>
+											<a href="#" class="btn_delete">삭제</a>
+										</div>
+									</footer>
+								</article>
+								
+								<!-- 댓글의 답글달기 -->
+								<section class="write_comment">
+									<h1 class="hide">답글달기</h1>
+									<div class="write_comment_container">
+										<!-- [D] 로그인하지 않았을 경우 -->
+										<!--
+										<div class="not_login">
+											<a href="#" class="btn_login">통합회원 로그인</a>
+											<a href="#" class="btn_fb_login">페이스북 로그인</a>
+											<p>페이스북 아이디로도 참여 가능합니다.</p>
+										</div>
+										-->
+										<!-- [D] 로그인 했을경우 -->
+										<p class="id">abd***</p>
+										
+										<div class="input_container">
+											<textarea cols="30" rows="10" title="댓글내용 입력">이거 짱.
+요즘 이거 하면서 마음 안정 시키고 있어요.</textarea>
+											<div class="attach_img">
+												<input type="file" title="이미지 첨부" />
+											</div>
+										</div>
+										<input type="submit" value="등록하기" class="btn_submit" />
+									</div>
+								</section>
+								
+							</li>
+						</ul>
+					</section>
+					
+					<section class="paginate">
+						<h1 class="hide">paginate</h1>
+						<div class="paginate_wrap">
+							<a href="#" class="prev">이전</a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#" class="next">다음</a>
+						</div>
+					</section>
+					
+				</section>
+				
+			</section>
+		</div>
+	</section>
+
+	<!-- 0716 수정 -->
+	<footer>
+		<section class="web_footer">
+			<h1 class="hide">Footer - Terms, Address, Etc</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : 106-86-43373 통신판매업신고번호 : 용산05823호</address>
+			<div class="tel">건강식품판매업 영업신고증 제8호 | 고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="tablet_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : 106-86-43373</address>
+			<div class="tel">통신판매업신고번호 : 용산05823호 | 건강식품판매업 영업신고증 제8호 | 고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="mobile_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관<br />5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 |<br />사업자등록번호 : 106-86-43373</address>
+			<div class="license">통신판매업신고번호 : 용산05823호 | 건강식품판매업<br />영업신고증 제8호 |</div>
+			<div class="tel">고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+	</footer>
+	<!--// 0716 수정 -->
+</div>
+</body>
+</html>

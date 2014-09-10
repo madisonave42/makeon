@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>주문취소 | 나의쇼핑 | MY PAGE | makeON Mall</title>
+	
+	<!-- For old IE -->
+	<!--[if lt IE 9]>
+	<script src="../js/lib/html5shiv.js"></script>
+	<![endif]-->
+	<!--// For old IE -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,900|Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/default.css" />
+	<link rel="stylesheet" href="../css/mypage.css" />
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="../js/function.js"></script>
+	<script src="../js/event.js"></script>
+</head>
+<body>
+<section class="skip">
+	<h1 class="hide">skip</h1>
+	<dl>
+		<dt class="hide">바로가기 메뉴</dt>
+		<dd><a href="#gnb">메인메뉴 바로가기</a></dd>
+		<dd><a href="#container">본문 바로가기</a></dd>
+	</dl>
+</section>
+<div class="mo_wrap">
+	<h1 class="hide">makeON 웹사이트</h1>
+	<!-- 0704 변경 -->
+	<header>
+		<section class="header_main">
+			<div class="inner_section">
+				<h1 class="hide">Header Main</h1>
+				<section class="makeon_logo">
+					<h1><strong class="hide">makeON 로고</strong><a href="/"><img src="../images/common/logo.png" alt="makeon logo" title="makeon logo" /></a></h1>
+				</section>
+				<nav id="gnb">
+					<h1 class="hide">makeON 메인 메뉴</h1>
+					<ul>
+						<li class="brand">
+							<a href="#">BRAND</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Brand story</a></li>
+									<li class="last"><a href="#">Making story</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="product">
+							<a href="#">PRODUCT</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li class="cleansing_enhancer"><a href="#">Cleansing enhancer</a></li>
+									<li class="face_enhancer"><a href="#">Makeup enhancer</a></li>
+									<li class="special"><a href="#">Special kit</a></li>
+									<li class="accessory last"><a href="#">Accessory</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="life">
+							<a href="#">LIFE BEAUTY</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Campaign</a></li>
+									<li class="last"><a href="#">From MakeON</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="event_menu">
+							<a href="#">EVENT</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="menu_shop">
+					<h2 class="hide">makeON 쇼핑 메뉴</h2>
+					<!-- login 상태와 logout 상태 모두 추가 -->
+					<!-- logout 상태 -->
+					<!--
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li><a href="#">쇼핑백</a></li>
+					</ul>
+					-->
+					<!-- login 상태 -->
+					<ul>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li class="shopping_bag">
+							<a href="#">쇼핑백</a>
+							<a class="count_bubble">
+								<div class="pr_count">12</div><span></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- mobile -->
+				<section class="btn_hide_menu">
+					<a href="#" class="bar" id="test">menu bar</a>
+				</section>
+			</div>
+		</section>
+		<section class="header_util">
+			<h1 class="hide">Header Util</h1>
+			<div class="inner_section">
+				<nav class="menu_guide">
+					<h2 class="hide">makeON 고객 메뉴</h2>
+					<ul>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">오프라인매장안내</a></li>
+						<li><a href="#">askON</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		
+	</header>
+	<!--// 0704 변경 -->
+
+	<section id="container" class="commerce">
+		<div class="inner_section">
+		
+			<h1 class="hide">Container</h1>
+			
+			<article class="location">
+				<h1 class="hide">location</h1>
+				<em class="home"><a href="#">Home</a></em>
+				<em>></em>
+				<em>MY PAGE</em>
+				<em>></em>
+				<em>나의쇼핑</em>
+				<em>></em>
+				<em class="current">주문배송조회</em>
+			</article>
+			
+			<section class="contents mypage order_cancel">
+				<h1>MY PAGE</h1>
+				
+				<section>
+					<h1 class="hide">나의쇼핑</h1>
+				
+					<div class="tab">
+						<ul>
+							<li class="tab_1"><a href="#" class="on">나의쇼핑</a></li>
+							<li class="tab_2"><a href="#">나의혜택</a></li>
+							<li class="tab_3"><a href="#">나의활동</a></li>
+							<li class="tab_4"><a href="#">나의정보</a></li>
+						</ul>
+					</div>
+					<section>
+						<h1 class="hide">주문취소</h1>
+						
+						<div class="sub_tab">
+							<ul>
+								<li><a href="#" class="on">주문배송조회</a></li>
+								<li><a href="#">취소/교환/반품</a></li>
+								<li><a href="#">쇼핑백</a></li>
+							</ul>
+						</div>
+						
+						<div class="mobile_sub_tab">
+							<select title="하위메뉴">
+								<option selected="selected">주문배송조회</option>
+								<option>취소/교환/반품</option>
+								<option>쇼핑백</option>
+							</select>
+						</div>
+						
+						<section class="inicis_info info_table">
+							<h1>이니시스 결제정보</h1>
+							<table class="type_horizon" summary="결제 상세 내역">
+								<caption style="display:none;">결제정보</caption>
+								<colgroup>
+									<col style="width:185px;" />
+									<col style="width:305px;" />
+									<col style="width:185px;" />
+									<col style="width:305px;" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">결제 방법</th>
+										<td colspan="3">무통장 입급</td>
+									</tr>	
+									<tr>
+										<th scope="row">입금 은행명</th>
+										<td>국민은행</td>
+										<th scope="row">입금 예금주</th>
+										<td>아모레 퍼시픽</td>
+									</tr>
+									<tr>
+										<th scope="row">입금 계좌번호</th>
+										<td>002403-04-2454584</td>
+										<th scope="row">입금 기한</th>
+										<td>2014년 7월 31일</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="msg">
+								<p>· 무통장 입금으로 결제하실 경우 입금기한 내 입금하시면 결제완료로 변경되어 배송이 진행됩니다.</p>
+								<p>· 무통장 입금 기한 내 결제가 이루어지지 않을 경우 자동적으로 취소 및 삭제가 됩니다.</p>
+							</div>
+						</section>
+						
+						<section class="refund_info info_table">
+							<h1 class="hide">환불금액</h1>
+							<table class="type_horizon" summary="환불 금액, 은행명, 계좌 정보 확인">
+								<caption style="display:none;">환불 상세내역</caption>
+								<colgroup>
+									<col style="width:185px;" />
+									<col style="width:305px;" />
+									<col style="width:185px;" />
+									<col style="width:305px;" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">총 환불 금액</th>
+										<td colspan="3"><span class="price">22,000원</span></td>
+									</tr>	
+									<tr>
+										<th scope="row"><label for="refund_bank">은행명</label></th>
+										<td>
+											<select id="refund_bank">
+												<option>국민은행</option>
+												<option>국민은행</option>
+											</select>
+										</td>
+										<th scope="row"><label for="refund_name">예금주명</label></th>
+										<td>
+											<input type="text" id="refund_name" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="refund_account">환불계좌</label></th>
+										<td colspan="3" class="refund_account">
+											<input type="text" id="refund_account" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="msg">
+								<p>· 뷰티포인트나 수분 포인트에서 주문 취소시 포인트가 부족할 경우 ( - , 마이너스) 포인트로 진행됩니다.</p>
+								<p>· 주문취소를 하시게 되면, 주문 시 적용하셨던 쿠폰은 소멸되며, 재발행 되지 않습니다.</p>
+								<p>· 예금주명은 주문자명과 같게 자동적으로 설정 됩니다.</p>
+								<p>· 카드사별로 실제 취소일은 상이할 수 있습니다.</p>
+							</div>
+						</section>
+						
+						<div class="btns_order">
+							<a href="#" class="go_back">이전 페이지</a>
+							<a href="#" class="btn_cancel">주문취소</a>
+						</div>
+						
+					</section>
+				</section>
+			</section>
+		</div>
+	</section>
+
+	<!-- 0716 수정 -->
+	<footer>
+		<section class="web_footer">
+			<h1 class="hide">Footer - Terms, Address, Etc</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : 106-86-43373 통신판매업신고번호 : 용산05823호</address>
+			<div class="tel">건강식품판매업 영업신고증 제8호 | 고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="tablet_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : 106-86-43373</address>
+			<div class="tel">통신판매업신고번호 : 용산05823호 | 건강식품판매업 영업신고증 제8호 | 고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="mobile_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관<br />5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 |<br />사업자등록번호 : 106-86-43373</address>
+			<div class="license">통신판매업신고번호 : 용산05823호 | 건강식품판매업<br />영업신고증 제8호 |</div>
+			<div class="tel">고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+	</footer>
+	<!--// 0716 수정 -->
+</div>
+</body>
+</html>

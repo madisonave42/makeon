@@ -1,0 +1,899 @@
+/* ==========================================================
+ * 공통 스타일
+ ============================================================ */
+/* 0818 수정 */
+ body {
+	font-size:13px;
+	line-height:1.4;
+	color:#666;
+	font-family:"Nanum Gothic", ng, sans-serif;
+}
+header {
+	height:45px;
+	background-color:#000;
+} 
+header h1 {
+	padding-left:20px;
+	line-height:45px;
+	color:#fff;
+	font-weight:bold;
+	font-size:18px;
+}
+/* 0818 추가 */
+input,
+select,
+textarea {
+	font-family:"Nanum Gothic", ng, sans-serif;
+}
+input[type=text],
+input[type=password] {
+	height:20px;
+	/*line-height:20px;*/
+	border:1px solid #ccc;
+}
+select {
+	height:24px;
+	line-height:24px;
+	border:1px solid #ccc;
+}
+textarea {
+	padding:5px;
+	border:1px solid #ccc;
+}
+a {
+	color:#666;
+}
+.hide {
+	position:absolute;
+	top:-9999em;
+}
+#contents {
+	padding:37px 0;
+	border:2px solid #000;
+}
+#contents.no_bottom_padding {
+	padding-bottom:0;
+}
+
+/* 버튼영역 */
+.btns {
+	text-align:center;
+}
+.btns a {
+	display:inline-block;
+	text-align:center;
+	font-weight:bold;
+	font-size:15px;
+	color:#fff;
+	width:88px;
+	height:38px;
+	line-height:38px;
+}
+.btns .btn_ok {
+	background:url(../images/popup/bg_btn_s_01.gif) no-repeat;
+}
+.btns .btn_cancel {
+	background:url(../images/popup/bg_btn_s_02.gif) no-repeat;
+}
+
+/* ==========================================================
+ * 로그인 안내
+ ============================================================ */
+.login > p {
+	margin-bottom:17px;
+	padding:0 20px;
+	color:#000;
+	font-weight:bold;
+	font-size:15px;
+	text-align:center;
+}
+.login .no_member {
+	margin-top:30px;
+	padding-top:27px;
+	border-top:1px solid #dfdfdf;
+}
+.login .no_member > p {
+	padding:0 40px;
+	text-align:center;
+}
+.login .no_member .btn_no_member {
+	display:block;
+	margin:0 auto;
+	margin-top:12px;
+	width:117px;
+	height:24px;
+	line-height:25px;
+	text-align:center;
+	font-size:11px;
+	background:url(../images/popup/bg_btn_no_member.gif) no-repeat;
+}
+
+/*===========================================================
+ * 비회원 구매약관
+ ============================================================ */
+.terms > section {
+	position:relative;
+	margin:0 20px;
+	margin-top:37px;
+}
+.terms > section:first-child {
+	margin-top:0;
+}
+.terms > section h1 {
+	color:#000;
+	font-weight:bold;
+}
+.terms > section .terms_content {
+	margin-top:7px;
+	padding:10px;
+	height:108px;
+	border:1px solid #dfdfdf;
+	overflow-y:scroll;
+}
+.terms > section .terms_content h2 {
+	margin-top:20px;
+	margin-bottom:5px;
+}
+.terms > section .terms_content h2:first-child {
+	margin-top:0;
+}
+.terms > section .terms_content p {
+	margin-bottom:3px;
+}
+.terms > section .terms_content ul {
+	margin-left:10px;
+	list-style:none;
+}
+.terms > section .terms_content ul li {
+	padding-left:1em;
+	text-indent:-1em;
+}
+.terms > section .agree {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.terms > section .agree input[type=checkbox]{
+	*margin:-4px;
+}
+.terms > section .agree label {
+	margin-left:5px;
+}
+.terms .btns {
+	margin-top:50px;
+}
+
+/*===========================================================
+ * 우편번호 찾기
+ ============================================================ */
+.find_address {
+	padding:0 20px;
+}
+.find_address nav {
+	margin-bottom:30px;
+}
+.find_address nav ul {
+	height:40px;
+	border-bottom:1px solid #000;
+}
+.find_address nav ul li {
+	float:left;
+}
+/* 0818 수정 */
+.find_address nav a {
+	display:block;
+	width:112px;
+	height:39px;
+	line-height:39px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#999;
+	background-color:#fafafa;
+	border:1px solid #ccc;
+	border-bottom:0;
+}
+.find_address nav a.on {
+	height:40px;
+	color:#000;
+	background-color:#fff;
+	border-color:#000;
+}
+.find_address nav a.tab_old {
+	border-right:0;
+}
+.find_address nav a.tab_old.on {
+	border-right:1px solid #000;
+}
+.find_address nav a.tab_new {
+	border-left:0;
+}
+.find_address nav a.tab_new.on {
+	border-left:1px solid #000;
+}
+
+.find_address .info_box {
+	padding:23px 0;
+	height:60px;
+	background-color:#f3f3f3;
+}
+.find_address .info_box .info_box_inner {
+	margin:0 auto;
+	width:75%;
+	max-width:320px;
+	overflow:hidden;
+}
+.find_address .info_box label {
+	float:left;
+	margin-top:3px;
+	margin-right:9px;
+	font-weight:bold;
+	color:#000;
+}
+.find_address .info_box input {
+	float:left;
+}
+.find_address .info_box p {
+	font-size:15px;
+	font-weight:bold;
+}
+.find_address .info_box p span {
+	color:#000;
+}
+
+.find_address .info_box .btn_search {
+	width:47px;
+	height:24px;
+	line-height:24px;
+	font-weight:bold;
+	text-align:center;
+	color:#fff;
+	background-color:#000;
+	border:0;
+}
+
+.find_address .step01 {
+	display:none;
+}
+.find_address .step01.on {
+	display:block;
+}
+.find_address .step01 > p {
+	margin-bottom:20px;
+	font-size:15px;
+	font-weight:bold;
+}
+.find_address .step01 > p span {
+	color:#000;
+}
+.find_address .step01 .result {
+	margin-top:16px;
+}
+.find_address .step01 .result > p {
+	text-align:center;
+}
+.find_address .step01 .result > p span {
+	font-weight:bold;
+	color:#000;
+}
+.find_address .step01 .result .result_addr_list {
+	margin-top:17px;
+}
+.find_address .step01 .result .result_addr_list h2 {
+	margin-top:17px;
+	padding-top:10px;
+	height:26px;
+	text-align:center;
+	border-top:2px solid #000;
+	border-bottom:1px solid #000;
+	color:#000;
+}
+.find_address .step01 .result .result_addr_list .addr_list_wrap {
+	height:160px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.find_address .step01 .result .result_addr_list ul li a {
+	display:block;
+	padding:11px 20px;
+	border-bottom:1px solid #ccc;
+}
+
+#old_addr .info_box .info_box_inner {
+	margin-top:20px;
+}
+
+#old_addr .info_box input[type=text] {
+	margin-right:3px;
+	width:185px;
+}
+
+#new_addr .select_way {
+	margin-bottom:17px;
+	text-align:center;
+}
+#new_addr .select_way .new_type01 {
+	margin-right:30px;
+}
+#new_addr .select_way label {
+	margin-left:10px;
+}
+#new_addr .way {
+	display:none;
+}
+#new_addr .way.on {
+	display:block;
+}
+#new_addr .way > p {
+	margin-bottom:11px;
+	font-size:11px;
+	text-align:center;
+}
+#new_addr .way .info_box .info_box_inner > div {
+	margin-top:10px;
+	overflow:hidden;
+}
+#new_addr .way .info_box .info_box_inner > div:first-child {
+	margin-top:0;
+}
+#new_addr .way .info_box label {
+	margin-right:0;
+	width:55px;
+}
+#new_addr .way .info_box select {
+	float:left;
+	width:95px;
+}
+#new_addr .way .info_box .new_way_cate01 {
+	margin-right:17px;
+}
+#new_addr .way .info_box input[type=text] {
+	margin-right:3px;
+	width:210px;
+}
+#new_addr .way .info_box input[type=text].new_way02_road {
+	margin-right:0;
+	width:260px;
+}
+
+.find_address .step02 {
+	display:none;
+}
+.find_address .step02.on {
+	display:block;
+}
+.find_address .step02 .info_box .info_box_inner {
+	margin-top:10px;
+	text-align:center;
+}
+.find_address .step02 .result {
+	margin-top:20px;
+}
+.find_address .step02 .result p {
+	margin-top:10px;
+	overflow:hidden;
+}
+.find_address .step02 .result p:first-child {
+	margin-top:0;
+}
+.find_address .step02 .result p > label,
+.find_address .step02 .result p > span {
+	float:left;
+	margin-top:3px;
+	width:57px;
+	font-weight:bold;
+	color:#000;
+}
+.find_address .step02 .result p > input[type=text] {
+	width:296px;
+}
+.find_address .step02 .btns {
+	margin-top:30px;
+}
+
+.find_address .step03 {
+	display:none;
+}
+.find_address .step03.on {
+	display:block;
+}
+.find_address .step03 .info_box .info_box_inner {
+	text-align:center;
+}
+.find_address .step03 .result {
+	margin-top:20px;
+}
+.find_address .step03 .result p {
+	margin-top:10px;
+	overflow:hidden;
+}
+.find_address .step03 .result p:first-child {
+	margin-top:0;
+}
+.find_address .step03 .result p input {
+	float:left;
+	margin-top:2px;
+}
+.find_address .step03 .result p label {
+	display:block;
+	margin-left:20px;
+	padding-left:5em;
+	text-indent:-5em;
+}
+.find_address .step03 .result p label > span {
+	font-weight:bold;
+	color:#000;
+}
+.find_address .step03 .btns {
+	margin-top:30px;
+}
+
+@media screen and ( max-width:480px ) {
+	.find_address .info_box {
+		height:auto;
+	}
+	.find_address .info_box .info_box_inner {
+		width:90%;
+	}
+	#old_addr .info_box .info_box_inner {
+    margin-top:0;
+	}
+	#old_addr .info_box label {
+		float:none;
+		display:block;
+	}
+	#old_addr .info_box input[type="text"] {
+    width: 50%;
+	}
+	#new_addr .select_way {
+		text-align:left;
+	}
+	#new_addr .select_way span {
+		display:block;
+	}
+	#new_addr .way .info_box input[type="text"] {
+    width: 50%;
+	}
+	#new_addr .way .info_box input.new_way02_road[type="text"] {
+    width: 70%;
+	}
+	.find_address .step02 .result p > input[type="text"] {
+    width: 70%;
+	}
+	#new_addr .way .info_box label {
+		float:none;
+		display:block;
+	}
+	#new_addr .way .info_box select:nth-of-type( 1 ) {
+		margin-bottom:10px;
+	}
+}
+
+/*===========================================================
+ * 쿠폰적용
+ ============================================================ */
+.coupon {
+	padding:0 20px;
+}
+.coupon > p {
+	padding-bottom:10px;
+	font-weight:bold;
+	font-size:15px;
+	border-bottom:1px solid #dfdfdf;
+	color:#000;
+}
+.coupon .info_box {
+	margin-top:30px;
+	padding:30px 20px;
+	background-color:#f3f3f3;
+}
+.coupon .info_box p {
+	margin-top:1px;
+	padding-left:10px;
+	font-weight:bold;
+	background:url(../images/popup/bullet_01.gif) no-repeat 0 8px;
+	line-height:1.6;
+}
+.coupon .info_box p:first-child {
+	margin-top:0;
+}
+.coupon .coupon_apply {
+	margin-top:27px;
+}
+.coupon .coupon_apply p {
+	
+}
+.coupon .coupon_apply table {
+	margin-top:10px;
+	width:100%;
+	border-top:2px solid #000;
+}
+.coupon .coupon_apply table caption {
+	font-size:0;
+	line-height:0;
+}
+.coupon .coupon_apply table th {
+	height:39px;
+	border-bottom:1px solid #000;
+	color:#000;
+}
+.coupon .coupon_apply table td {
+	padding:10px 0;
+	text-align:center;
+	border-bottom:1px solid #ccc;
+}
+
+.coupon .btns {
+	margin-top:30px;
+}
+
+/*===========================================================
+ * 통합회원인증 로그인
+ ============================================================ */
+.member_cert_login .login_box {
+	margin:0 auto;
+	width:260px;
+}
+.member_cert_login .login_box > div {
+	*overflow:hidden;
+}
+.member_cert_login .login_box > div:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.member_cert_login .login_box > div label {
+	float:left;
+	margin-top:3px;
+	width:62px;
+	color:#000;
+	font-weight:bold;
+}
+.member_cert_login .login_box > div input {
+	float:left;
+	color:#000;
+	width:194px;
+	height:26px;
+	line-height:26px;
+	background-color:#f8f8f8;
+}
+.member_cert_login .login_box .id {
+	margin-bottom:10px;
+}
+.member_cert_login .login_box .pw {
+	margin-bottom:20px;
+}
+.member_cert_login .btn_login {
+	display:block;
+	width:100%;
+	height:51px;
+	line-height:51px;
+	font-weight:bold;
+	font-size:15px;
+	color:#fff;
+	text-align:center;
+	background-color:#000;
+	border:0;
+	cursor:pointer;
+}
+.member_cert_login .helper_box {
+	margin-top:40px;
+	padding:10px 0;
+	border-top:1px solid #ccc;
+	background-color:#f8f8f8;
+	*overflow:hidden;
+}
+.member_cert_login .helper_box:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.member_cert_login .helper_box > div {
+	float:left;
+	width:50%;
+	height:66px;
+	text-align:center;
+	*width:49.9%;
+}
+.member_cert_login .helper_box > div h2 {
+	padding-top:5px;
+	margin-bottom:10px;
+	font-size:12px;
+	font-weight:normal;
+}
+.member_cert_login .helper_box > div a {
+	display:inline-block;
+	font-size:11px;
+	height:25px;
+	line-height:27px;
+}
+.member_cert_login .helper_box .find_account .find_account_wrap {
+	height:100%;
+	border-right:1px solid #ccc;
+}
+.member_cert_login .helper_box .find_account .btn_find_id {
+	width:87px;
+	background:url(../images/popup/bg_btn_find_id.gif) no-repeat;
+}
+.member_cert_login .helper_box .find_account .btn_find_pw {
+	width:98px;
+	background:url(../images/popup/bg_btn_find_pw.gif) no-repeat;
+}
+.member_cert_login .helper_box .signin .btn_signin {
+	width:135px;
+	background:url(../images/popup/bg_btn_signin.gif) no-repeat;
+}
+
+@media screen and ( max-width:420px ) {
+	.member_cert_login .helper_box > div {
+		float:none;
+		width:100%;
+	}
+	.member_cert_login .helper_box .find_account {
+		padding-bottom:10px;
+		border-bottom:1px solid #ccc;
+	}
+	.member_cert_login .helper_box .find_account .find_account_wrap {
+		border-right:0;
+	}
+	.member_cert_login .helper_box .signin {
+		padding-top:10px;
+	}
+}
+
+/* ==========================================================
+ * 통합회원인증 페이스북 연동
+ ============================================================ */
+.allow_facebook > p {
+	margin-bottom:17px;
+	padding:0 20px;
+	color:#000;
+	font-weight:bold;
+	font-size:15px;
+	text-align:center;
+}
+.allow_facebook .btns .btn_not_now {
+	width:141px;
+	background:url(../images/popup/bg_btn_b_01.gif) no-repeat;
+}
+.allow_facebook .btns .btn_allow {
+	width:141px;
+	background:url(../images/popup/bg_btn_b_02.gif) no-repeat;
+}
+.allow_facebook .setting_info {
+	margin-top:30px;
+	padding-top:27px;
+	border-top:1px solid #dfdfdf;
+}
+.allow_facebook .setting_info > p {
+	padding:0 40px;
+	text-align:center;
+}
+
+/* ==========================================================
+ * 체험단 신청하기
+ ============================================================ */
+.apply_event{
+	margin:0 20px;
+	border-top:2px solid #000;
+}
+.apply_event table {
+	width:100%;
+}
+.apply_event caption {
+	font-size:0;
+	line-height:0;
+}
+.apply_event th{
+	padding-left:15px;
+	height:39px;
+	text-align:left;
+	font-weight:bold;
+	border-bottom:1px solid #ccc;
+	background-color:#f3f3f3;
+	color:#000;
+}
+.apply_event td{
+	border-bottom:1px solid #ccc;
+	text-align:left;
+	color:#666;
+	padding:7px 0 7px 15px;
+}
+.apply_event td .hyphen {
+	float:left;
+	margin:4px 5px 0;
+}
+.apply_event td.name input[type=text] {
+	width:125px;
+}
+.apply_event td.cell select {
+	float:left;
+	width:57px;
+}
+.apply_event td.cell input[type=text] {
+	float:left;
+	width:53px;
+}
+.apply_event td.address > div {
+	*overflow:hidden;
+}
+.apply_event td.address > div:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.apply_event td.address .zip input[type=text] {
+	float:left;
+	width:73px;
+}
+.apply_event td.address .zip > a {
+	float:left;
+	margin-left:5px;
+	width:79px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	font-size:11px;
+	background:url(../images/popup/bg_btn_find_addr.gif) no-repeat;
+	color:#666;
+}
+.apply_event td.address .detail {
+	margin-top:6px;
+}
+.apply_event td.address .detail input[type=text] {
+	float:left;
+	width:142px;
+}
+.apply_event td.address .detail input[type=text]:first-child {
+	margin-right:3px;
+}
+.apply_event td.email input[type=text] {
+	width:291px;
+}
+.apply_event td.blog input[type=text] {
+	width:291px;
+}
+.apply_event td.visitor input[type=text] {
+	width:123px;
+}
+.apply_event td.text textarea {
+	margin:0;
+	width:283px;
+	height:142px;
+}
+.apply_event .agree {
+	margin-top:17px;
+}
+.apply_event .agree input {
+	margin:0;
+	vertical-align:middle;
+	*margin:-4px;
+}
+.apply_event .agree label {
+	margin-left:6px;
+	vertical-align:middle;
+}
+.apply_event .agree p {
+	margin-top:6px;
+	padding-left:8px;
+	font-size:11px;
+	color:#666;
+	background:url(../images/popup/bullet_01.gif) no-repeat 0 7px;
+}
+.apply_event .btns {
+	margin-top:30px;
+}
+.apply_event .btns a {
+	width:141px;
+	background:url(../images/popup/bg_btn_b_01.gif) no-repeat;
+}
+
+@media screen and ( max-width:480px ) {
+	.apply_event th {
+		display:block;
+		line-height:39px;
+		border-bottom:0;
+	}
+	.apply_event td {
+		display:block;
+	}
+	.apply_event td.cell:after {
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.apply_event td.address .detail input[type=text] {
+		float:none;
+		width:249px;
+	}
+	.apply_event td.address .detail input[type=text]:first-child {
+		margin-bottom:6px;
+		width:249px;
+	}
+	.apply_event td.email input[type=text] {
+		width:249px;
+	}
+	.apply_event td.blog input[type=text] {
+		width:249px;
+	}
+	.apply_event td.text textarea {
+		width:239px;
+	}
+}
+
+/*===========================================================
+ * 메이크온 수신동의
+ ============================================================ */
+.agree {
+	padding:0 20px;
+}
+.agree > h2 {
+	margin-top:25px;
+	font-size:15px;
+	color:#000;
+}
+.agree > h2:first-child {
+	margin-top:0;
+}
+.agree > p {
+	margin-top:15px;
+	font-size:13px;
+	color:#000;
+}
+.agree ul {
+	margin-top:15px;
+}
+.agree ul li {
+	padding-left:10px;
+	text-indent:-10px;
+}
+.agree .agree_form {
+	margin-top:27px;
+}
+.agree .agree_form table {
+	margin-top:10px;
+	width:100%;
+	border-top:2px solid #000;
+}
+.agree .agree_form table caption {
+	font-size:0;
+	line-height:0;
+}
+.agree .agree_form table th {
+	padding-left:10px;
+	height:39px;
+	color:#000;
+	border-bottom:1px solid #ccc;
+	background-color:#f3f3f3;
+	text-align:left;
+}
+.agree .agree_form table td {
+	padding:10px 0;
+	padding-left:10px;
+	border-bottom:1px solid #ccc;
+}
+.agree .agree_form table td input,
+.agree .agree_form table td label {
+	margin:0;
+	padding:0;
+	vertical-align:middle;
+}
+.agree .agree_form table td label {
+	display:inline-block;
+	width:80px;
+}
+
+.agree .btns {
+	margin-top:30px;
+}
+
+@media screen and ( max-width:480px ) {
+	.agree .agree_form table th {
+		display:block;
+		line-height:39px;
+		border-bottom:0;
+	}
+	.agree .agree_form table td {
+		display:block;
+	}
+}

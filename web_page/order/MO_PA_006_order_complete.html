@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>주문완료 | SHOPPING BAG | makeON Mall</title>
+	
+	<!-- For old IE -->
+	<!--[if lt IE 9]>
+	<script src="../js/lib/html5shiv.js"></script>
+	<![endif]-->
+	<!--// For old IE -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900|Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/default.css" />
+	<link rel="stylesheet" href="../css/order.css" />
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="../js/function.js"></script>
+	<script src="../js/event.js"></script>
+</head>
+<body>
+<section class="skip">
+	<h1 class="hide">skip</h1>
+	<dl>
+		<dt class="hide">바로가기 메뉴</dt>
+		<dd><a href="#gnb">메인메뉴 바로가기</a></dd>
+		<dd><a href="#container">본문 바로가기</a></dd>
+	</dl>
+</section>
+<div class="mo_wrap">
+	<h1 class="hide">makeON 웹사이트</h1>
+	<!-- 0704 변경 -->
+	<header>
+		<section class="header_main">
+			<div class="inner_section">
+				<h1 class="hide">Header Main</h1>
+				<section class="makeon_logo">
+					<h1><strong class="hide">makeON 로고</strong><a href="/"><img src="../images/common/logo.png" alt="makeon logo" title="makeon logo" /></a></h1>
+				</section>
+				<nav id="gnb">
+					<h1 class="hide">makeON 메인 메뉴</h1>
+					<ul>
+						<li class="brand">
+							<a href="#">BRAND</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Brand story</a></li>
+									<li class="last"><a href="#">Making story</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="product">
+							<a href="#">PRODUCT</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li class="cleansing_enhancer"><a href="#">Cleansing enhancer</a></li>
+									<li class="face_enhancer"><a href="#">Makeup enhancer</a></li>
+									<li class="special"><a href="#">Special kit</a></li>
+									<li class="accessory last"><a href="#">Accessory</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="life">
+							<a href="#">LIFE BEAUTY</a>
+							<div class="submenu_wrap">
+								<ul class="submenu">
+									<li><a href="#">Campaign</a></li>
+									<li class="last"><a href="#">From MakeON</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="event_menu">
+							<a href="#">EVENT</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="menu_shop">
+					<h2 class="hide">makeON 쇼핑 메뉴</h2>
+					<!-- login 상태와 logout 상태 모두 추가 -->
+					<!-- logout 상태 -->
+					<!--
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li><a href="#">쇼핑백</a></li>
+					</ul>
+					-->
+					<!-- login 상태 -->
+					<ul>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						<li class="shopping_bag">
+							<a href="#">쇼핑백</a>
+							<a class="count_bubble">
+								<div class="pr_count">12</div><span></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- mobile -->
+				<section class="btn_hide_menu">
+					<a href="#" class="bar" id="test">menu bar</a>
+				</section>
+			</div>
+		</section>
+		<section class="header_util">
+			<h1 class="hide">Header Util</h1>
+			<div class="inner_section">
+				<nav class="menu_guide">
+					<h2 class="hide">makeON 고객 메뉴</h2>
+					<ul>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">오프라인매장안내</a></li>
+						<li><a href="#">askON</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		
+	</header>
+	<!--// 0704 변경 -->
+
+	<section id="container" class="commerce">
+		<div class="inner_section">
+		
+			<h1 class="hide">Container</h1>
+			
+			<article class="location">
+				<h1 class="hide">location</h1>
+				<em class="home">Home</em>
+				<em>></em>
+				<em>SHOPPING BAG</em>
+				<em>></em>
+				<em class="current">주문완료</em>
+			</article>
+			
+			<section class="contents order complete">
+				
+				<h1>SHOPPING BAG</h1>
+				
+				<section class="step">
+					<h1 class="hide">Shopping 단계</h1>
+					<ul>
+						<li class="step_1"><div class="icon"> </div><div>01. 쇼핑백</div></li>
+						<li class="step_2"><div class="icon"> </div><div>02. 주문/결제</div></li>
+						<li class="step_3 on"><div class="icon"> </div><div>03. 주문완료</div></li>
+					</ul>
+				</section>
+				
+				<section class="msg_top">
+					<h1 class="hide">주문완료</h1>
+					<p class="msg_1">메이크온을 이용해 주셔서 감사합니다.</p>
+					<p class="msg_2">주문이 정상적으로 접수되었습니다.</p>
+					<p class="msg_pay_price">최종 결제금액 : <span>135,630,000</span></p>
+					<p class="msg_order_num">주문번호 : <span>232364649797</span></p>
+					<p class="msg_3"><strong>지병민</strong>님의 이메일(zergle***@naver.com)과 SMS(010-2323-1***)로 안내해드리겠습니다.</p>
+					<p class="msg_4">주문하신 내역은 <strong>[마이페이지- 주문배송조회]</strong>에서 다시 확인이 가능합니다.</p>
+				</section>
+				
+				<!-- [D] 테이블 상황 세가지 : [1] 사은품 없는 경우, [2] 사은품 있고 리스트의 중간에 위치하는 경우, [3] 사은품 있고 리스트의 끝에 위치하는 경우  -->
+				<!-- [1] : 구입품 tr 의 class 이름 purchase 그대로 유지 -->
+				<!-- [2] : 사은품의 마지막 tr 에 class="freebie last" 추가 -->
+				<!-- [3] : 사은품의 마지막 tr 에 class="freebie last no_more_purchase" 추가 -->
+				
+				<section class="list_table">
+					<h1 class="hide">Shopping Bag 목록</h1>
+					<table summary="고객이 선택한 제품 목록 리스트">
+						<caption class="hide">선택 리스트 테이블</caption>
+						<colgroup>
+							<col style="width:72px;" />
+							<col style="width:90px;" />
+							<col style="width:auto;" />
+							<col style="width:70px;" />
+							<col style="width:161px;" />
+							<col style="width:97px;" />
+							<col style="width:152px;" />
+							<col style="width:160px;" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="chk"><input type="checkbox" checked="checked" disabled="disabled" title="선택불가" /></th>
+								<th scope="col" colspan="2">상품명/옵션명/상품가격</th>
+								<th scope="col">수량</th>
+								<th scope="col">할인금액</th>
+								<th scope="col">구매가격</th>
+								<th scope="col">뷰티포인트 결제금액</th>
+								<th scope="col">적립예상 뷰티포인트</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="purchase">
+								<td class="chk">
+									<input type="checkbox" checked="checked" disabled="disabled" title="선택불가" />
+								</td>
+								<td class="product_image">
+									<img src="../images/temp/order_product_img_1.jpg" alt="제품이미지 대체 텍스트" />
+								</td>
+								<td class="product_info">
+									<p class="name">피팅인핸서</p>
+									<p class="option">(클렌징 브러쉬 1종)</p>
+									<p class="product_price">125,000</p>
+								</td>
+								<td class="amount">
+									12
+								</td>
+								<td class="discount">
+									<p class="discount_price">3,000원</p>
+								</td>
+								<td class="purchase_price">
+									135,000원
+								</td>
+								<td class="point_payment">
+									135p
+								</td>
+								<td class="save_point">
+									2,000P
+								</td>
+							</tr>
+							
+							<tr class="freebie">
+								<td class="chk">
+									사은품
+								</td>
+								<td class="product_image">
+									<img src="../images/temp/order_product_img_2.jpg" alt="제품이미지 대체 텍스트" />
+								</td>
+								<td class="product_info">
+									<p class="name">메이크업 인핸서 브러쉬</p>
+								</td>
+								<td>
+									1개
+								</td>
+								<td colspan="4">&nbsp;</td>
+							</tr>
+							<tr class="freebie last">
+								<td class="chk">
+									사은품
+								</td>
+								<td class="product_image">
+									<img src="../images/temp/order_product_img_3.jpg" alt="제품이미지 대체 텍스트" />
+								</td>
+								<td class="product_info">
+									<p class="name">메이크업 인핸서 브러쉬</p>
+								</td>
+								<td>
+									1개
+								</td>
+								<td colspan="4">&nbsp;</td>
+							</tr>
+							
+							<tr class="purchase">
+								<td class="chk">
+									<input type="checkbox" checked="checked" disabled="disabled" title="선택불가" />
+								</td>
+								<td class="product_image">
+									<img src="../images/temp/order_product_img_1.jpg" alt="제품이미지 대체 텍스트" />
+								</td>
+								<td class="product_info">
+									<p class="name">피팅인핸서</p>
+									<p class="option">(클렌징 브러쉬 1종)</p>
+									<p class="product_price">125,000</p>
+								</td>
+								<td class="amount">
+									12
+								</td>
+								<td class="discount">
+									<p class="discount_price">3,000원</p>
+								</td>
+								<td class="purchase_price">
+									135,000원
+								</td>
+								<td class="point_payment">
+									135p
+								</td>
+								<td class="save_point">
+									2,000P
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</section>
+				
+				<section class="customer_info info_table">
+					<h1>주문고객정보</h1>
+					<table class="type_horizon" summary="장바구니에 담긴 품목 예상 결제 금액표">
+						<caption style="display:none;">예상결제금액표</caption>
+						<colgroup>
+							<col style="width:185px;" />
+							<col style="width:795px;" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><label for="customer">주문하시는 분</label></th>
+								<td>지병민</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="order_phone">휴대폰번호</label></th>
+								<td class="order_phone">010-1234-5678</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="email">이메일주소</label></th>
+								<td class="email">makeon@amore.co.kr</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				
+				<section class="destination_info info_table">
+					<h1>배송지 정보</h1>
+					<table class="type_horizon" summary="장바구니에 담긴 품목 예상 결제 금액표">
+						<caption style="display:none;">예상결제금액표</caption>
+						<colgroup>
+							<col style="width:185px;" />
+							<col style="width:305px;" />
+							<col style="width:185px;" />
+							<col style="width:305px;" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td>홍길동</td>
+								<th scope="row">핸드폰 번호</th>
+								<td>010-2326-1212</td>
+							</tr>
+							<tr>
+								<th scope="row">전화번호</th>
+								<td>02-1111-2222</td>
+								<th scope="row">주소</th>
+								<td>서울시 강남구</td>
+							</tr>
+							<tr>
+								<th scope="row">배송메시지</th>
+								<td colspan="3">빠른배송</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				
+				<section class="pay_info info_table">
+					<h1>결제 정보</h1>
+					<table class="type_horizon" summary="장바구니에 담긴 품목 예상 결제 금액표">
+						<caption style="display:none;">예상결제금액표</caption>
+						<colgroup>
+							<col style="width:185px;" />
+							<col style="width:795px;;" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">최종 결제금액</th>
+								<td>
+									<strong>288,000원</strong>
+									<span>(상품금액합계 288,000원/ 할인적용금액 0원 / 배송비 0원 / 뷰티포인트 2,000P)</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">결제방법 </th>
+								<td>
+									<strong>무통장입금</strong>
+									<span>(은행명 : 우리은행 / 계좌번호 : 63600900318785 / 예금주:아모레퍼시픽) 05월 12일 까지 입금 </span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				
+				<div class="btns_order">
+					<a href="#" class="order_check">주문내역조회</a>
+					<a href="#" class="order_print">주문내역인쇄</a>
+					<a href="#" class="go_main">메인으로</a>
+				</div>
+				
+			</section>
+		</div>
+	</section>
+
+	<!-- 0716 수정 -->
+	<footer>
+		<section class="web_footer">
+			<h1 class="hide">Footer - Terms, Address, Etc</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : 106-86-43373 통신판매업신고번호 : 용산05823호</address>
+			<div class="tel">건강식품판매업 영업신고증 제8호 | 고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="tablet_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관 5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 | 사업자등록번호 : 106-86-43373</address>
+			<div class="tel">통신판매업신고번호 : 용산05823호 | 건강식품판매업 영업신고증 제8호 | 고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="mobile_footer">
+			<h1 class="hide">Mobile Footer</h1>
+			<div class="terms"><a href="#">회사소개</a><span>·</span><a href="#">개인정보취급방침</a><span>·</span><a href="#">사이트이용약관</a></div>
+			<address>100-230 서울특별시 중구 청계천로 100 시그니쳐타워 서관<br />5~13층 ㈜ 아모레퍼시픽 | 대표이사 심상배 |<br />사업자등록번호 : 106-86-43373</address>
+			<div class="license">통신판매업신고번호 : 용산05823호 | 건강식품판매업<br />영업신고증 제8호 |</div>
+			<div class="tel">고객센터(수신자요금부담) 080-030-5454 | FAX : 031-591- 6085</div>
+			<div class="copyright">COPYRIGHT(C) 2014 (주) 아모레퍼시픽. ALL RIGHTS RESERVED.</div>
+			<div class="family_site">
+				<a href="#" class="site_heading">Family Site</a>
+				<ul class="site_list">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">aaa</a></li>
+				</ul>
+			</div>
+		</section>
+	</footer>
+	<!--// 0716 수정 -->
+</div>
+</body>
+</html>

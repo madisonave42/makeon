@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>체험단신청하기</title>
+	<meta name="description" content="">
+	<meta name="author" content="Administrator">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900|Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/popup.css"/>
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/popup.js"></script>
+</head>
+<!-- [D] 팝업창 너비 546px  -->
+<body>
+<header>
+	<h1>체험단신청하기</h1>
+</header>
+<div id="contents">
+	<div class="apply_event">
+		<table summary="신청자 성명, 연락처, 주소, 이메일, 신청사유 등 작성">
+			<caption>체험단신청 양식</caption>
+			<colgroup>
+				<col style="width:185px;" />
+				<col style="width:auto;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row"><label for="name">성명</label></th>
+					<td class="name">
+						<input type="text" id="name" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="cell">연락처</label></th>
+					<td class="cell">
+						<select id="cell">
+							<option>010</option>
+							<option>011</option>
+						</select>
+						<span class="hyphen">-</span>
+						<input type="text" title="휴대폰 가운데자리" />
+						<span class="hyphen">-</span>
+						<input type="text" title="휴대폰 마지막자리" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="address">주소</label></th>
+					<td class="address">
+						<div class="zip">
+							<input type="text" id="address" title="우편번호 앞자리" />
+							<span class="hyphen">-</span>
+							<input type="text" title="우편번호 뒷자리" />
+							<a href="#">우편번호 찾기</a>
+						</div>
+						<div class="detail">
+							<input type="text" title="시군구 주소" />
+							<input type="text" title="상세주소" />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="email">이메일</label></th>
+					<td class="email">
+						<input type="text" id="email" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="blog">블로그주소</label></th>
+					<td class="blog">
+						<input type="text" id="blog" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="visitor">방문자수(일평균)</label></th>
+					<td class="visitor">
+						<input type="text" id="visitor" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="text">체험단 신청 이유</label></th>
+					<td class="text">
+						<textarea id="text" cols="30" rows="10"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="agree">
+			<div><input type="checkbox" id="agree" /><label for="agree">개인정보제공동의</label></div>
+			<p>체험단 모집 관련 정보는 귀사에 귀속되며, 외부유출 또는 별도의 용도로 활용되지 않습니다.</p>
+		</div>
+		<div class="btns">
+			<a href="#">체험단신청하기</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

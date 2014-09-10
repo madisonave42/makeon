@@ -1,0 +1,337 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+/*==================================================
+ * 브랜드소개
+ ===================================================*/
+#container .about .inner_section {
+	margin:0 auto;
+	text-align:center;
+	width:100%;
+	/*max-width:1600px;*/
+	background-size:cover;
+	min-width:980px;
+}
+.about h1 {
+	font-family:'Lato', sans-serif;
+	font-weight:bold;
+	font-size:50px;
+	font-size:5rem;
+	color:#fff;
+	text-transform:uppercase;
+}
+.about h1 img {
+	display:inline;
+}
+.about p {
+	margin-top:22px;
+	padding-bottom:44px;
+	line-height:1.4;
+	font-size:18px;
+	font-size:1.8rem;
+	color:#fff;
+	background:url(../images/brand/bg_about_p.png) no-repeat 50% 100%;
+}
+#container .about.makeon .inner_section {
+	/*padding-top:196px;*/
+	height:499px;
+	/*background:url(../images/brand/bg_about_01.jpg) no-repeat 50% 0;*/
+	/*background-size:cover;*/
+}
+
+.about.makeon video{width:100%;}
+.about.makeon .main{
+	position:absolute;
+	width:399px; height:72px;
+	top:50%; left:50%;
+	margin-top:-36px; margin-left:-200px;
+}
+
+.about.vision .inner_section {
+	padding-top:224px;
+	height:376px;
+	background:url(../images/brand/bg_about_02.jpg) no-repeat 50% 0;
+}
+.about.philosophy .inner_section {
+	padding-top:211px;
+	height:389px;
+	background:url(../images/brand/bg_about_03.jpg) no-repeat 50% 0;
+}
+.about.naming .inner_section {
+	padding-top:200px;
+	height:400px;
+	background:url(../images/brand/bg_about_04.jpg) no-repeat 50% 0;
+}
+.about.making_story {
+	position:relative;
+}
+.about.making_story .inner_section {
+	padding-top:85px;
+	height:115px;
+	background:url(../images/brand/bg_about_05.jpg) no-repeat 50% 0;
+}
+.about.making_story p {
+	margin:0;
+	font-family: 'Nanum Myeongjo', serif;
+	font-size:24px;
+	font-size:2.4rem;
+	background:none;
+}
+.about.making_story a {
+	position:absolute;
+	right:40px;
+	bottom:31px;
+	width:106px;
+	height:22px;
+	font-size:15px;
+	font-size:1.5rem;
+	line-height:22px;
+	font-family:'Lato', sans-serif;
+	color:#fff;
+	text-align:left;
+	background:url(../images/brand/icon_arrow.png) no-repeat 100% 0;
+}
+
+/*==================================================
+ * 메이킹 스토리
+ ===================================================*/
+ 
+/* 인트로 */
+.making_intro {
+	position:relative;
+	height:701px;
+	overflow:hidden;
+	min-width:980px;
+}
+#container .making_intro .inner_section {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-800px;
+	width:1600px;
+	min-width:980px;
+}
+.making_intro .inner_section > a {
+	position:absolute;
+	top:0;
+	width:800px;
+	height:701px;
+}
+.making_intro .inner_section > a:hover {
+	z-index:10;
+}
+.making_intro .inner_section > a span {
+	font-size:45px;
+	font-size:4.5rem;
+	font-weight:bold;
+}
+.making_intro .inner_section .he {
+	left:0;
+	background:url(../images/brand/bg_he.jpg) no-repeat;
+}
+.making_intro .inner_section .he span {
+	position:absolute;
+	top:257px;
+	left:424px;
+	color:#fff;
+}
+.making_intro .inner_section .she {
+	right:0;
+	background:url(../images/brand/bg_she.jpg) no-repeat 100% 0;
+}
+.making_intro .inner_section .she span {
+	position:absolute;
+	top:257px;
+	right:464px;
+	color:#000;
+}
+.making_intro .inner_section > div {
+	position:absolute;
+	top:349px;
+	left:50%;
+	margin-left:-283px;
+	width:566px;
+	height:171px;
+	background-color:#000;
+	z-index:100;
+}
+.making_intro .inner_section > div p {
+	margin-top:15px;
+	font-size:15px;
+	font-size:1.5rem;
+	line-height:1.6;
+	color:#fff;
+	text-align:center;
+}
+.making_intro .inner_section > div p:first-child {
+	margin-top:43px;
+	font-size:30px;
+	font-size:3rem;
+	font-weight:bold;
+	line-height:1;
+	color:#e5a680;
+}
+
+/* his design, her technology */
+.making_sub_intro {
+	position:relative;
+	margin:0 auto;
+}
+#container .making_sub_intro .inner_section {
+	padding-top:222px;
+	width:100%;
+	height:478px;
+	max-width:1600px;
+	min-width:980px;
+}
+.making_sub_intro.his_design .inner_section{
+	background:url(../images/brand/bg_his_design.jpg) no-repeat 50% 0;
+}
+.making_sub_intro.her_technology .inner_section {
+	background:url(../images/brand/bg_her_technology.jpg) no-repeat 50% 0;
+}
+.making_sub_intro .inner_section {
+	width:600px;
+	text-align:center;
+}
+.making_sub_intro .inner_section h1 {
+	font-family:'Lato', sans-serif;
+	font-weight:bold;
+	font-size:50px;
+	font-size:5rem;
+	color:#000;
+	text-transform:uppercase;
+}
+.making_sub_intro .inner_section p {
+	margin-top:7px;
+	font-size:15px;
+	font-size:1.5rem;
+	color:#666;
+	line-height:1.5;
+}
+.making_sub_intro .inner_section .subtitle {
+	margin-top:19px;
+	font-size:20px;
+	font-size:2rem;
+	font-weight:bold;v
+	line-height:1;
+	color:#000;
+}
+.making_sub_intro .inner_section > a {
+	display:block;
+	margin:0 auto;
+	margin-top:47px;
+	width:201px;
+	height:54px;
+	line-height:54px;
+	font-size:20px;
+	font-size:2rem;
+	font-weight:bold;
+	color:#fff;
+	background:url(../images/brand/bg_btn_view.png) no-repeat;
+}
+.making_sub_intro .links a {
+	position:absolute;
+	top:338px;
+	height:24px;
+	line-height:24px;
+	font-size:15px;
+	font-size:1.5rem;
+	font-weight:bold;
+	color:#000;
+	background:url(../images/brand/icon_arrow_2.png) no-repeat;
+	letter-spacing:0;
+}
+.making_sub_intro .links .btn_back {
+	left:40px;
+	padding-left:32px;
+}
+.making_sub_intro .links .btn_next {
+	right:40px;
+	padding-right:32px;
+	background-position:100% 0;
+}
+
+/* lhim technology */
+#container .tech_view .inner_section {
+	padding-top:167px;
+	height:332px;
+	background:url(../images/brand/bg_tech_view_01.jpg) no-repeat 50% 0;
+}
+.making_sub_intro.tech_view .links a {
+	top:238px;
+}
+.making_sub_intro.tech_view p {
+	margin-top:17px;
+	padding-bottom:38px;
+	font-size:18px;
+	font-size:1.8rem;
+	background:url(../images/brand/bg_about_p_2.png) no-repeat 50% 100%;
+}
+.tech_lhim {
+	text-align:center;
+}
+#container .tech_lhim .inner_section {
+	padding-top:363px;
+	height:237px;
+	width:100%;
+	max-width:1600px;
+	min-width:980px;
+	background:url(../images/brand/bg_tech_view_02.jpg) no-repeat 50% 0;
+}
+.tech_lhim h1 {
+	font-size:30px;
+	font-size:3rem;
+	color:#fff;
+}
+.tech_lhim p {
+	margin-top:24px;
+	font-size:18px;
+	font-size:1.8rem;
+	line-height:1.4;
+	color:#ccc;
+}
+
+.tech_feature {
+	text-align:center;
+}
+#container .tech_feature .inner_section {
+	padding-top:170px;
+	height:430px;
+	width:100%;
+	max-width:1600px;
+	min-width:980px;
+}
+.tech_feature h1 {
+	margin-bottom:16px;
+	font-family:'Lato', sans-serif;
+	font-size:40px;
+	font-size:4rem;
+}
+.tech_feature p {
+	margin-bottom:10px;
+	font-size:18px;
+	font-size:1.8rem;
+	line-height:1.5;
+	color:#666;
+}
+.tech_feature .efficacy {
+	margin-top:32px;
+	height:123px;
+	background:url(../images/brand/bg_efficacy.png) no-repeat 50% 5px;
+}
+.tech_feature .efficacy h2 {
+	margin-bottom:19px;
+	font-size:15px;
+	font-size:1.5rem;
+	color:#000;
+}
+.tech_feature .efficacy p {
+	margin-bottom:0;
+	font-size:15px;
+	font-size:1.5rem;
+}
+.tech_feature.micro_motion .inner_section {
+	background:url(../images/brand/bg_tech_view_03.jpg) no-repeat 50% 0;
+}
+.tech_feature.fitting_motion .inner_section {
+	background:url(../images/brand/bg_tech_view_04.jpg) no-repeat 50% 0;
+}

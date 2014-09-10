@@ -1,0 +1,159 @@
+/*==================================================
+ * 로그인 스타일
+ ===================================================*/
+
+/* 회원 영역 설정 */
+.contents.member{width:780px; margin:0 auto; padding:113px 0 90px 0;}
+
+/* 타이틀 스타일 */
+.member>hgroup{text-align:center;}
+.member>hgroup>h1{font-size:60px; font-size:6.0rem; margin-bottom:10px; font-weight:bold;}
+.member>hgroup>p{color:#666; line-height:1.8;}
+
+.member>.form_area{width:780px; height:188px; border-top:2px solid #000; margin-top:34px;}
+.member fieldset{width:396px; height:93px; margin:47px auto 0; position:relative; /**overflow:hidden;*/ display:block;}
+.member fieldset:after{content:""; display:block; clear:both;}
+.member fieldset .input_area{font-weight:bold; font-size:13px; font-size:1.3rem; margin-bottom:10px; *overflow:hidden;}
+.member fieldset .input_area:after{content:""; display:block; clear:both;}
+.member fieldset .input_area>div{float:left;}
+.member fieldset .input_area>div>label{display:block; width:62px; height:30px; line-height:30px;}
+.member fieldset .input_area>div>input{width:194px; height:28px; margin:0; background:#f8f8f8; border:1px solid #bbb; padding:0;}
+.member fieldset .check_area{margin-left:62px; color:#999; font-size:11px; font-size:1.1rem; position:relative;}
+.member fieldset .check_area:after{content:""; display:block; clear:both;}
+.member fieldset .check_area .chkbox{position:absolute; top:0; left:0;}
+.member fieldset .check_area>div>label{display:block; line-height:14px; margin-left:17px;}
+.member fieldset .check_area input[type=checkbox]{margin:0; margin:-4px\9; display:block;}
+.member fieldset .btn_login{position:absolute; top:0; right:0;}
+.member fieldset .btn_login>*{display:block; float:left;}
+.member fieldset .btn_login .login,
+.member fieldset .btn_login>a{
+	width:131px; height:70px; font-weight:bold; font-size:15px;
+	font-size:1.5rem; color:#fff; background:#555; text-align:center; line-height:71px; margin-left:3px;
+}
+.member fieldset .btn_login .login {border:0; background:#000; color:#fff;}
+.member fieldset .btn_login .fb_login {padding-left:54px; width:77px; background:#3b589c url(../images/member/btn_login_facebook.gif) no-repeat 31px 24px; text-align:left;}
+
+.member>.btn_area{width:780px; height:66px; border-top:1px solid #dfdfdf; border-bottom:1px solid #000; padding:11px 0; background:#f8f8f8; text-align:center;}
+.member>.btn_area>div>p{margin:7px 0 14px 0; color:#666;}
+.member>.btn_area>.find_idpw{width:390px; height:66px; float:left;}
+.member>.btn_area>.find_idpw>.btn_find{width:188px; margin:0 auto; *overflow:hidden;}
+.member>.btn_area>.find_idpw>.btn_find:after{content:""; display:block; clear:both;}
+.member>.btn_area>.find_idpw>.btn_find a{display:block; height:25px; line-height:25px; float:left; color:#666}
+.member>.btn_area>.find_idpw>.btn_find a.find_id{width:87px; background:url(../images/member/btn_member_1.gif); margin-right:3px;}
+.member>.btn_area>.find_idpw>.btn_find a.find_pw{width:98px; background:url(../images/member/btn_member_2.gif);}
+.member>.btn_area>.unity_membership{width:389px; height:66px; border-left:1px solid #dfdfdf; float:left;}
+.member>.btn_area>.unity_membership a{display:block; width:165px; height:25px; line-height:25px; margin:0 auto; background:url(../images/member/btn_member_3.gif); color:#666;}
+
+/*==================================================
+ * 비회원 주문 재설정 스타일(로그인 스타일 base)
+ ===================================================*/
+
+.contents.member.nonmember{width:780px; margin:0 auto; padding:119px 0 110px 0;}
+
+.member.nonmember>hgroup>h1{font-size:45px; font-size:4.5rem; margin-bottom:19px;}
+
+.member.nonmember>.form_area{width:780px; height:168px; border-top:2px solid #000; margin-top:34px; *zoom:1;}
+.member.nonmember fieldset{width:413px; height:93px; margin:47px auto 0; position:relative; *overflow:hidden;}
+.member.nonmember fieldset .input_area>div>label{display:block; width:76px; height:30px; line-height:30px;}
+.member.nonmember fieldset .phone_number>div{float:left; height:30px; line-height:30px; color:#666;}
+.member.nonmember fieldset .phone_number>div>select{width:57px; height:30px; line-height:30px; border:1px solid #bbb; background:#f8f8f8; color:#666; display:block;}
+.member.nonmember fieldset .phone_number>div>input{width:55px; height:28px; line-height:28px; border:1px solid #bbb; background:#f8f8f8; padding:0; display:block; position:relative; *top:-1px;}
+.member.nonmember fieldset .phone_number>div.dash{margin:0 4px;}
+.member.nonmember fieldset .btn_search{position:absolute; top:0; right:0;}
+.member.nonmember fieldset .btn_search>a{
+	display:block; width:131px; height:70px; font-weight:bold; font-size:15px;
+	font-size:1.5rem; color:#fff; background:#000; text-align:center; line-height:71px; margin-left:3px;
+}
+.member.nonmember>.btn_area p{margin:7px 0 14px 0; color:#666;}
+.member.nonmember .btn_area a{display:block; width:165px; height:25px; line-height:25px; margin:0 auto; background:url(../images/member/btn_member_3.gif); color:#666;}
+
+
+/* response */
+@media screen and (max-width:1000px){
+	
+}
+
+@media screen and (min-width:768px) and (max-width:1000px){
+
+	.contents.member{width:728px;}
+	.member>.form_area{width:728px;}
+	.member>.btn_area{width:728px;}
+	.member>.btn_area>.find_idpw{width:364px;}
+	.member>.btn_area>.unity_membership{width:363px;}
+	
+	.contents.member.nonmember{width:728px;}
+	.member.nonmember>.form_area{width:728px;}
+	
+}
+
+@media screen and (max-width:767px){
+	
+	.contents.member{width:auto; padding:30px 0 50px 0;}
+	
+	.member>hgroup>h1{font-size:35px; font-size:3.5rem;}
+	.member.nonmember>hgroup>h1{font-size:35px; font-size:3.5rem;}
+	
+	hgroup>p{letter-spacing:-1px;}
+	.member>.form_area{width:auto; height:auto;}
+	.member fieldset{height:auto;}
+	
+	.member fieldset{width:auto;}
+	
+	.member fieldset .btn_login{position:relative; margin:20px 0 37px;}
+	.member fieldset .btn_login>*{float:none;}
+	.member fieldset .btn_login .login,
+	.member fieldset .btn_login>a{width:100%; height:50px; line-height:51px; margin:0 0 10px 0;}
+	
+	.member fieldset .input_area>div:first-child{width:20%;}
+	.member fieldset .input_area>div:last-child{width:80%;}
+	.member fieldset .input_area>div>input{width:99%;}
+	
+	.member fieldset .check_area{margin-left:20%;}
+	
+	.member>.btn_area{width:auto; line-height:1.6; overflow:hidden; height:auto;}
+	.member>.btn_area>.find_idpw{width:50%; height:auto; box-sizing:border-box; padding:0 30px;}
+	.member>.btn_area>.unity_membership{width:50%; height:auto; box-sizing:border-box; padding:0 25px; border-left:1px solid #dfdfdf;}
+	
+	.contents.member.nonmember{width:auto;}
+	.member.nonmember>.form_area{width:auto; height:auto}
+	.member.nonmember fieldset{width:auto; height:auto; margin:47px auto;}
+	.member.nonmember fieldset .input_area>div:first-child{width:25%;}
+	.member.nonmember fieldset .input_area>div:last-child{width:75%;}
+	.member.nonmember fieldset .phone_number>div{width:29%}
+	.member.nonmember fieldset .phone_number>div.dash{width:2%}
+	.member.nonmember fieldset .phone_number>div>select{width:100%;}
+	.member.nonmember fieldset .phone_number>div>input{width:100%;}
+	
+	.member.nonmember fieldset .btn_search{position:relative; margin-top:30px;}
+	.member.nonmember fieldset .btn_search>a{width:auto; height:50px; line-height:51px; margin:0;}
+
+}
+
+@media screen and (max-width:500px){
+	
+	.member>.btn_area{width:auto; line-height:1.6; overflow:hidden; height:auto;}
+	.member>.btn_area>div>p{margin:7px 0 14px 0; color:#666;}
+	
+	.member>.btn_area>.find_idpw{width:50%; height:auto; box-sizing:border-box; padding:0 30px;}
+	.member>.btn_area>.find_idpw>.btn_find{width:auto;}
+	.member>.btn_area>.find_idpw>.btn_find:after{content:""; display:block; clear:both;}
+	.member>.btn_area>.find_idpw>.btn_find a{float:none;}
+	.member>.btn_area>.find_idpw>.btn_find a.find_id{margin:0 auto 5px;}
+	.member>.btn_area>.find_idpw>.btn_find a.find_pw{width:98px; margin:0 auto; background:url(../images/member/btn_member_2.gif);}
+	
+	.member>.btn_area>.unity_membership{width:50%; height:auto; box-sizing:border-box; padding:0 25px; border-left:1px solid #dfdfdf;}
+	.member>.btn_area>.unity_membership a{display:block; width:80px; height:47px; line-height:1.6; padding:8px 9px 0; background:url(../images/member/btn_member_4.gif);}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+

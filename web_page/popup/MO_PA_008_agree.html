@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메이크온 수신동의</title>
+	<meta name="description" content="">
+	<meta name="author" content="Administrator">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900|Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/popup.css"/>
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/popup.js"></script>
+</head>
+<!-- [D] 팝업창 너비 546px  -->
+<body>
+<header>
+	<h1>메이크온 수신동의</h1>
+</header>
+<div id="contents">
+	<div class="agree">
+		<h2>안녕하세요, 아모레님</h2>
+		<p>뷰티의 일상을 바꾸는 라이프 뷰티 디바이스 브랜드 메이크온에 방문해주셔서 감사합니다.<br />메이크온에서 제공하는 특별한 이벤트와 소식을 받고 싶으시다면, 아래 항목에서 "수신" 동의를 해주시기 바랍니다.</p>
+		
+		<h2>&lt;메이크온 수신동의&gt;</h2>
+		<ul>
+			<li>- 아래 수신란에 체크 표시를 해주세요.<br />수신항목을 체크하시면 아모레퍼시픽 통합회원 정보에도 함께 반영됩니다.</li>
+			<li>- 전체 선택시 이메일, SMS, 우편물 수신여부가 자동 설정됩니다.</li>
+		</ul>
+		<div class="agree_form">
+			<table summary="이메일, sms등 각종 정보 수신설정">
+				<caption>수신동의 항목 설정</caption>
+				<colgroup>
+					<col style="width:185px" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">수신동의</td>
+						<td>
+							<input type="radio" id="chk_all" />
+							<label for="chk_all">전체선택</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">메이크온 관심 브랜드 등록</td>
+						<td>
+							<input type="radio" id="chk_brand_y" name="brand" />
+							<label for="chk_brand_y">네</label>
+							<input type="radio" id="chk_brand_n" name="brand" />
+							<label for="chk_brand_n">아니오</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이메일 수신여부</td>
+						<td>
+							<input type="radio" id="chk_email_y" name="email" />
+							<label for="chk_email_y">수신</label>
+							<input type="radio" id="chk_email_n" name="email" />
+							<label for="chk_email_n">미수신</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">SMS 수신여부</td>
+						<td>
+							<input type="radio" id="chk_sms_y" name="sms" />
+							<label for="chk_sms_y">수신</label>
+							<input type="radio" id="chk_sms_n" name="sms" />
+							<label for="chk_sms_n">미수신</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">우편물 수신여부</td>
+						<td>
+							<input type="radio" id="chk_letter_y" name="letter" />
+							<label for="chk_letter_y">수신</label>
+							<input type="radio" id="chk_letter_n" name="letter" />
+							<label for="chk_letter_n">미수신</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="btns">
+			<a href="#" class="btn_ok">확인</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
