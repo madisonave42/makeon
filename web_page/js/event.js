@@ -941,7 +941,7 @@ $(function(){
 		
 		
 	})();
-	 
+	/* 
 	// 옵션 이미지 thumbnail
 	(function(){
 		$('.pr_detail.pr_main .option .thumb_img li a').on('click' , function(event){
@@ -984,7 +984,7 @@ $(function(){
 		});
 		
 	})();
-	
+	*/
 	// feature motion
 	(function(){
 		
@@ -1250,6 +1250,86 @@ $(function(){
 		};
 		
 		$(window).on('load resize', initPostSlide);
+		
+	})();
+	
+	// latest list
+	(function(){
+		
+		var $postWrap = $('.brand_gallery .lastest_post ul');
+		var $postObj = $('.brand_gallery .lastest_post ul li');
+		var postCount = $postWrap.find('li').size();
+		var post = new Rolling( $postObj );
+		var postWidth = $('.brand_gallery .lastest_post ul li').outerWidth()+8;
+		
+		// mobile swipe
+		if( $('div').is('.lastest_post') ){
+			
+			var postObjLength = $postObj.length;
+			
+				// swipe start
+				$postObj.on('touchstart', function(e){
+					//e.preventDefault();
+					//clearInterval(tId);
+					touchedIndex = $(this).index();
+					oldLeft = originalLeft = e.originalEvent.touches[0].clientX;
+					oldTop = originalTop = e.originalEvent.touches[0].clientY;
+					originalPosition = $postWrap.position().left;
+					//bigImg.swipeStart( $imgObj, touchedIndex );
+				});
+			
+				// swipe move
+				$postObj.on('touchmove', function(e){
+					var distanceX = oldLeft - e.originalEvent.touches[0].clientX;
+					var distanceY = oldTop - e.originalEvent.touches[0].clientY;
+					oldLeft = e.originalEvent.touches[0].clientX;
+					oldTop = e.originalEvent.touches[0].clientY;
+					slope = distanceY / distanceX;
+					if( Math.abs(slope) < 0.5 ) {
+						e.preventDefault();
+						//bigImg.swipeMove( $imgObj, distanceX );
+						$postWrap.stop().animate({left:'-=' + distanceX}, 0);
+					}
+				});
+				
+				// swipe end
+				$postObj.on('touchend', function(e){
+					
+					var diff = originalPosition - $postWrap.position().left;
+					postWidth = $('.brand_gallery .lastest_post ul li').outerWidth()+8;
+					
+					if( Math.abs( diff ) > postWidth/4 ){
+						// next
+						if( diff > 0 ){
+							var nextIndex = touchedIndex+1;
+							if(nextIndex >= postObjLength){
+								bigImage.sliding( $postWrap, touchedIndex, postCount, 1, postWidth );
+							} else {
+								bigImage.sliding( $postWrap, nextIndex, postCount, 1, postWidth );
+								if(nextIndex>0){ $('.btns_slide .prev').show(); }
+								if(nextIndex >= postObjLength-1){ $('.btns_slide .next').hide(); }
+							}
+							
+						// prev	
+						} else {
+							var nextIndex = touchedIndex-1;
+							if(nextIndex < 0){
+								bigImage.sliding( $postWrap, touchedIndex, postCount, 1, postWidth );
+							} else {
+								bigImage.sliding( $postWrap, nextIndex, postCount, 1, postWidth );
+								if(nextIndex<=postObjLength){ $('.btns_slide .next').show(); }
+								if(nextIndex < 1){ $('.btns_slide .prev').hide(); }
+							}
+						}
+						
+					} else {
+						bigImage.sliding( $postWrap, touchedIndex, postCount, 1, postWidth );
+					}
+					
+				});
+		}
+		
+		
 		
 	})();
 	
